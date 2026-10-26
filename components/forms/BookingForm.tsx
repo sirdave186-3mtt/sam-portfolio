@@ -60,7 +60,7 @@ export default function BookingForm() {
                     <h3 className="font-serif text-2xl font-bold text-white">Inquiry Received</h3>
                     <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
                         Thank you for reaching out. Dr. Immanuelson Sam&apos;s executive office will review your event
-                        details and respond within 24 to 48 business hours[cite: 17].
+                        details and respond within 24 to 48 business hours.
                     </p>
                     <button
                         onClick={() => setStatus("idle")}
@@ -132,7 +132,7 @@ export default function BookingForm() {
                         {/* Engagement Type */}
                         <div className="space-y-1.5">
                             <label className="text-xs uppercase tracking-wider text-slate-300 font-medium">
-                                Engagement Type *[cite: 7, 8, 9]
+                                Engagement Type *
                             </label>
                             <select
                                 {...register("engagementType")}
@@ -192,7 +192,7 @@ export default function BookingForm() {
                         <textarea
                             {...register("message")}
                             rows={4}
-                            placeholder="Tell us about your audience size, executive level, key challenges to address, and expected deliverables[cite: 7]..."
+                            placeholder="Tell us about your audience size, executive level, key challenges to address, and expected deliverables..."
                             className="w-full px-4 py-3 rounded-xl bg-brand-card border border-brand-border text-white text-sm focus:outline-none focus:border-brand-gold transition-colors placeholder:text-slate-600 resize-none"
                         />
                         {errors.message && (
@@ -209,12 +209,12 @@ export default function BookingForm() {
                         {status === "submitting" ? (
                             <>
                                 <Loader2 className="w-4 h-4 animate-spin" />
-                                <span>Transmitting Inquiry to Dr. Sam&apos;s Team[cite: 17]...</span>
+                                <span>Transmitting Inquiry to Dr. Sam&apos;s Team...</span>
                             </>
                         ) : (
                             <>
                                 <Send className="w-4 h-4" />
-                                <span>Submit Speaking / Booking Inquiry[cite: 17]</span>
+                                <span>Submit Speaking / Booking Inquiry</span>
                             </>
                         )}
                     </button>
