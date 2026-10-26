@@ -3,7 +3,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import LogoMarquee from "@/components/ui/LogoMarquee";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowRight,
   Calendar,
@@ -22,7 +21,7 @@ export default function HomePage() {
       tag: "Keynotes & Summits",
       title: "Keynote Speaking & Masterclasses",
       description:
-        "Addressing governance councils, board retreats, and pan-African summits on servant leadership, change, and risk optimization[cite: 3, 6, 7].",
+        "Addressing governance councils, board retreats, and pan-African summits on servant leadership, change, and risk optimization.",
       href: "/speaking",
       cta: "Explore Speaking Topics",
     },
@@ -31,7 +30,7 @@ export default function HomePage() {
       tag: "GMPC Practice",
       title: "Strategic Advisory & Consulting",
       description:
-        "Guiding C-suite executives, state governors, and federal institutions through institutional transformation and capital preservation[cite: 2, 3, 16].",
+        "Guiding C-suite executives, state governors, and federal institutions through institutional transformation and capital preservation.",
       href: "/rates",
       cta: "View Services & Rates",
     },
@@ -57,7 +56,7 @@ export default function HomePage() {
         {/* 2. Live Motion Client Marquee */}
         <LogoMarquee />
 
-        {/* 3. The Three Executive Pillars (Compact Portal Grid) */}
+        {/* 3. The Three Executive Pillars */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-bg relative">
           <div className="max-w-7xl mx-auto space-y-12">
 
@@ -140,7 +139,7 @@ export default function HomePage() {
                   TIME CODE: <span className="text-brand-gold italic">Unlocking Peak Performance & Purpose</span>
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  A battle-tested blueprint for executives, founders, and leaders to master their time, eliminate productivity leaks, and deliver consistent strategic outcomes under pressure[cite: 1, 2, 3].
+                  A battle-tested blueprint for executives, founders, and leaders to master their time, eliminate productivity leaks, and deliver consistent strategic outcomes under pressure.
                 </p>
               </div>
 
@@ -178,7 +177,7 @@ export default function HomePage() {
                 Engage Dr. Immanuelson Sam
               </h2>
               <p className="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-                Whether booking a physical keynote, board retreat facilitation, or a private advisory session, partner with Dr. Sam to turn uncertainty into institutional triumph[cite: 3, 6, 7].
+                Whether booking a physical keynote, board retreat facilitation, or a private advisory session, partner with Dr. Sam to turn uncertainty into institutional triumph.
               </p>
             </div>
 
@@ -188,7 +187,7 @@ export default function HomePage() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-brand-gold hover:bg-brand-gold-hover text-black font-semibold text-xs uppercase tracking-wider transition-all duration-200 shadow-gold-glow"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Initiate Booking Inquiry[cite: 17]</span>
+                <span>Initiate Booking Inquiry</span>
               </Link>
               <Link
                 href="/rates"
