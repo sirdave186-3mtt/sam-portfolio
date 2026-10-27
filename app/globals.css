@@ -1,53 +1,44 @@
 @import "tailwindcss";
 
-@theme {
-  --color-brand-bg: #08090C;
-  --color-brand-surface: #10131A;
-  --color-brand-card: #161B26;
-  --color-brand-gold: #D4AF37;
-  --color-brand-gold-light: #EED888;
-  --color-brand-gold-hover: #C5A059;
-  --color-brand-bronze: #9E783D;
-  --color-brand-border: rgba(255, 255, 255, 0.08);
-  --color-brand-gold-border: rgba(212, 175, 55, 0.25);
+@layer base {
+  :root {
+    /* Brand Primary & Accents (PDF Page 3) */
+    --imperial-navy: #072954;
+    --heritage-gold: #CC9F58;
+    --pure-white: #FFFFFF;
 
-  --font-serif: var(--font-cormorant), serif;
-  --font-sans: var(--font-jakarta), sans-serif;
+    /* Supporting Palette (PDF Page 3) */
+    --deep-navy: #041A38;
+    --mist: #E8EDF4;
+    --champagne: #F5EBD9;
+    --ivory: #FAF7F2;
+    --slate: #4A5568;
 
-  --shadow-gold-glow: 0 0 30px -5px rgba(212, 175, 55, 0.2);
+    /* Semantic Mappings */
+    --font-heading: 'Lora', Georgia, serif;
+    --font-body: 'Poppins', Calibri, sans-serif;
+  }
+
+  body {
+    background-color: var(--pure-white);
+    color: var(--imperial-navy);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--imperial-navy);
+  }
 }
 
-:root {
-  --font-cormorant: 'Cormorant Garamond', serif;
-  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
-}
-
-body {
-  background-color: #08090C;
-  color: #F8F9FA;
-  font-family: var(--font-jakarta);
-  overflow-x: hidden;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #08090C;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1E2433;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
-}
-
-@keyframes marquee {
+/* Continuous Infinite Marquee */
+@keyframes marqueeScroll {
   0% {
     transform: translateX(0%);
   }
@@ -57,6 +48,12 @@ body {
   }
 }
 
-.animate-marquee {
-  animation: marquee 35s linear infinite;
+.animate-marquee-smooth {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 35s linear infinite;
+}
+
+.animate-marquee-smooth:hover {
+  animation-play-state: paused;
 }

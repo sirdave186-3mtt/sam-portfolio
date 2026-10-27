@@ -1,35 +1,31 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Lora, Poppins } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const lora = Lora({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-cormorant",
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const poppins = Poppins({
   subsets: ["latin"],
+  variable: "--font-body",
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-jakarta",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Immanuelson Sam | Management Consultant, Leadership Coach & Global Speaker",
+  title: "Dr. Immanuelson Sam | Global Speaker & Management Consultant",
   description:
-    "Official portfolio of Dr. Immanuelson Sam. Author of 'Sacred Solitude', YALI Fellow, Managing Partner at GMPC, empowering Africa's future through strategic leadership and culture transformation.",
+    "Official website of Dr. Immanuelson Sam. Managing Partner at Goldenmuv Premium Consulting, author of Time Code, and leadership coach.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${jakarta.variable} scroll-smooth`}>
-      <body className="bg-brand-bg text-slate-100 font-sans antialiased selection:bg-brand-gold selection:text-black">
+    <html lang="en" className={`${lora.variable} ${poppins.variable} scroll-smooth`}>
+      <body className="bg-white text-slate-800 antialiased selection:bg-[#CC9F58] selection:text-[#072954]">
         {children}
       </body>
     </html>

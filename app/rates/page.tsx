@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
     title: "Services & Booking Rate Card | Dr. Immanuelson Sam",
     description:
-        "Official executive rate card and services menu for Dr. Immanuelson Sam. Keynote speaking, strategic management consulting, corporate training, and executive advisory.",
+        "Official executive rate card and services schedule for Dr. Immanuelson Sam. Keynote speaking, strategic management consulting, corporate training, and executive advisory.",
 };
 
 interface ServiceItem {
@@ -158,7 +158,7 @@ const SERVICES_DATA: ServiceItem[] = [
 
 export default function RatesPage() {
     return (
-        <div className="relative min-h-screen bg-brand-bg text-slate-100 flex flex-col selection:bg-brand-gold selection:text-black">
+        <div className="relative min-h-screen bg-white text-[#4A5568] flex flex-col selection:bg-[#CC9F58] selection:text-[#072954]">
             <Navbar />
 
             <main className="flex-1 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
@@ -166,44 +166,43 @@ export default function RatesPage() {
 
                     {/* Header Banner */}
                     <div className="max-w-3xl space-y-4">
-                        <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-gold">
-                            <span className="w-6 h-[1px] bg-brand-gold" />
-                            Goldenmuv Premium Consulting Limited
+                        <div className="inline-flex items-center gap-2">
+                            <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
+                                GOLDENMUV PREMIUM CONSULTING LIMITED
+                            </span>
                         </div>
-                        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
+                        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.1]">
                             Services & Booking <br />
-                            <span className="text-brand-gold italic">Rate Card & Advisory Menu</span>
+                            <span className="italic text-[#CC9F58]">Rate Card & Advisory Schedule</span>
                         </h1>
-                        <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed">
                             Transparent, value-driven investment brackets for engaging Dr. Immanuelson Sam across
                             keynote addresses, corporate masterclasses, executive retreats, and institutional advisory.
                         </p>
                     </div>
 
                     {/* Rate Policy & Notes Card */}
-                    <div className="rounded-2xl bg-brand-surface border border-brand-gold-border/40 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-80 h-80 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
-
-                        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                            <div className="md:col-span-8 space-y-3">
-                                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-gold">
-                                    <ShieldCheck className="w-4 h-4" />
+                    <div className="rounded-3xl bg-[#FAF7F2] border border-[#E8EDF4] p-6 sm:p-10 shadow-sm relative overflow-hidden">
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                            <div className="md:col-span-8 space-y-4">
+                                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#072954]">
+                                    <ShieldCheck className="w-4 h-4 text-[#CC9F58]" />
                                     <span>Standard Booking Protocol</span>
                                 </div>
-                                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                                <h3 className="font-serif text-2xl font-bold text-[#072954]">
                                     Engagement Guidelines & Customization
                                 </h3>
-                                <ul className="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
-                                    <li className="flex items-start gap-2">
-                                        <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
-                                        <span>All rates are quoted in <strong>Nigerian Naira (₦)</strong> and are customizable based on audience scale, institutional scope, geographic location, and depth.</span>
+                                <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A5568] leading-relaxed">
+                                    <li className="flex items-start gap-2.5">
+                                        <CheckCircle2 className="w-4 h-4 text-[#CC9F58] shrink-0 mt-0.5" />
+                                        <span>All rates are quoted in <strong>Nigerian Naira (₦)</strong> and tailored based on audience scale, institutional scope, geographic location, and depth.</span>
                                     </li>
-                                    <li className="flex items-start gap-2">
-                                        <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
+                                    <li className="flex items-start gap-2.5">
+                                        <CheckCircle2 className="w-4 h-4 text-[#CC9F58] shrink-0 mt-0.5" />
                                         <span>Fees exclude logistics, return flights, executive accommodation, and statutory VAT (unless bundled into corporate retainers).</span>
                                     </li>
-                                    <li className="flex items-start gap-2">
-                                        <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
+                                    <li className="flex items-start gap-2.5">
+                                        <CheckCircle2 className="w-4 h-4 text-[#CC9F58] shrink-0 mt-0.5" />
                                         <span><strong>Multi-session packages, corporate retainers, and institutional board retainers</strong> are available upon tailored request.</span>
                                     </li>
                                 </ul>
@@ -211,8 +210,8 @@ export default function RatesPage() {
 
                             <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-center md:items-end">
                                 <Link
-                                    href="/#booking"
-                                    className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-brand-gold hover:bg-brand-gold-hover text-black font-semibold text-xs uppercase tracking-wider transition-all duration-200 shadow-gold-glow"
+                                    href="/contact"
+                                    className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-sm"
                                 >
                                     <Calendar className="w-4 h-4" />
                                     <span>Request Custom Quote</span>
@@ -221,9 +220,9 @@ export default function RatesPage() {
                                 <a
                                     href="/docs/dr-immanuelson-sam-speaker-kit.pdf"
                                     download
-                                    className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-brand-border bg-brand-card hover:bg-brand-surface text-slate-300 hover:text-white text-xs uppercase tracking-wider transition-all duration-200"
+                                    className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all duration-200 shadow-xs"
                                 >
-                                    <Download className="w-4 h-4 text-brand-gold" />
+                                    <Download className="w-4 h-4 text-[#CC9F58]" />
                                     <span>Download PDF Rate Card</span>
                                 </a>
                             </div>
@@ -231,10 +230,12 @@ export default function RatesPage() {
                     </div>
 
                     {/* Rates Grid: 10 Core Services */}
-                    <div className="space-y-6">
-                        <div className="flex items-center justify-between border-b border-brand-border pb-4">
-                            <h2 className="font-serif text-2xl font-bold text-white">Full Services Schedule</h2>
-                            <span className="text-xs uppercase tracking-wider text-slate-400 font-medium">
+                    <div className="space-y-8">
+                        <div className="flex items-center justify-between border-b border-[#E8EDF4] pb-4">
+                            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#072954]">
+                                Full Services Schedule
+                            </h2>
+                            <span className="text-xs uppercase tracking-wider text-[#4A5568] font-bold">
                                 10 Practice Offerings
                             </span>
                         </div>
@@ -245,68 +246,68 @@ export default function RatesPage() {
                                 return (
                                     <div
                                         key={service.number}
-                                        className="p-6 sm:p-7 rounded-2xl bg-brand-card/90 border border-brand-border hover:border-brand-gold-border transition-all duration-300 flex flex-col justify-between space-y-5 relative group"
+                                        className="p-6 sm:p-7 rounded-2xl bg-white border border-[#E8EDF4] hover:border-[#CC9F58] transition-all duration-300 flex flex-col justify-between space-y-5 shadow-xs hover:shadow-lg relative group"
                                     >
                                         {service.popular && (
-                                            <div className="absolute top-4 right-4 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-brand-gold/15 border border-brand-gold-border text-brand-gold text-[10px] font-bold uppercase tracking-wider">
-                                                <Sparkles className="w-3 h-3" />
+                                            <div className="absolute top-4 right-4 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#FAF7F2] border border-[#CC9F58]/40 text-[#072954] text-[10px] font-bold uppercase tracking-wider">
+                                                <Sparkles className="w-3 h-3 text-[#CC9F58]" />
                                                 <span>Core Practice</span>
                                             </div>
                                         )}
 
                                         <div className="space-y-4">
                                             {/* Top Header: Number, Icon, Category */}
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold group-hover:border-brand-gold-border transition-colors shrink-0">
+                                            <div className="flex items-center gap-3.5">
+                                                <div className="w-11 h-11 rounded-xl bg-[#FAF7F2] border border-[#E8EDF4] flex items-center justify-center text-[#CC9F58] group-hover:bg-[#CC9F58] group-hover:text-white transition-colors shrink-0">
                                                     <IconComponent className="w-5 h-5" />
                                                 </div>
                                                 <div>
                                                     <div className="flex items-center gap-2">
-                                                        <span className="text-[10px] font-mono font-bold text-slate-500">#{service.number}</span>
-                                                        <span className="text-[10px] uppercase tracking-wider font-semibold text-brand-gold px-2 py-0.5 rounded bg-brand-surface border border-brand-border">
+                                                        <span className="text-[10px] font-mono font-bold text-[#4A5568]">#{service.number}</span>
+                                                        <span className="text-[10px] uppercase tracking-wider font-bold text-[#072954] px-2 py-0.5 rounded bg-[#FAF7F2] border border-[#E8EDF4]">
                                                             {service.category}
                                                         </span>
                                                     </div>
-                                                    <h3 className="font-serif text-lg sm:text-xl font-bold text-white mt-1 group-hover:text-brand-gold transition-colors">
+                                                    <h3 className="font-serif text-lg sm:text-xl font-bold text-[#072954] mt-1 group-hover:text-[#CC9F58] transition-colors leading-snug">
                                                         {service.title}
                                                     </h3>
                                                 </div>
                                             </div>
 
                                             {/* Pricing Highlight */}
-                                            <div className="p-3.5 rounded-xl bg-brand-surface/80 border border-brand-border/60 flex items-baseline justify-between gap-2">
-                                                <span className="font-serif text-xl sm:text-2xl font-bold text-brand-gold tracking-tight">
+                                            <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E8EDF4] flex items-baseline justify-between gap-2">
+                                                <span className="font-serif text-2xl font-bold text-[#072954] tracking-tight">
                                                     {service.rateRange}
                                                 </span>
-                                                <span className="text-[11px] text-slate-400 capitalize">
+                                                <span className="text-xs text-[#4A5568] font-medium capitalize">
                                                     {service.unit}
                                                 </span>
                                             </div>
 
                                             {/* Duration Tag */}
-                                            <div className="flex items-center gap-2 text-xs text-slate-300">
-                                                <Clock className="w-3.5 h-3.5 text-brand-gold shrink-0" />
-                                                <span className="font-medium text-slate-200">Duration:</span>
-                                                <span className="text-slate-400">{service.duration}</span>
+                                            <div className="flex items-center gap-2 text-xs text-[#4A5568]">
+                                                <Clock className="w-3.5 h-3.5 text-[#CC9F58] shrink-0" />
+                                                <span className="font-bold text-[#072954]">Duration:</span>
+                                                <span>{service.duration}</span>
                                             </div>
 
                                             {/* Service Overview */}
-                                            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                            <p className="text-xs sm:text-sm text-[#4A5568] leading-relaxed">
                                                 {service.overview}
                                             </p>
                                         </div>
 
                                         {/* Card Footer CTA */}
-                                        <div className="pt-4 border-t border-brand-border/60 flex items-center justify-between">
-                                            <span className="text-[11px] text-slate-500 font-mono">
+                                        <div className="pt-4 border-t border-[#E8EDF4] flex items-center justify-between">
+                                            <span className="text-[11px] text-[#4A5568] font-mono">
                                                 Item Ref: GMPC-{service.number}
                                             </span>
                                             <Link
-                                                href="/#booking"
-                                                className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-gold hover:text-white transition-colors"
+                                                href="/contact"
+                                                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#072954] group-hover:text-[#CC9F58] transition-colors"
                                             >
                                                 <span>Book Engagement</span>
-                                                <ArrowRight className="w-3.5 h-3.5" />
+                                                <ArrowRight className="w-3.5 h-3.5 text-[#CC9F58]" />
                                             </Link>
                                         </div>
                                     </div>
@@ -316,18 +317,18 @@ export default function RatesPage() {
                     </div>
 
                     {/* Bottom Retainer Callout */}
-                    <div className="rounded-2xl bg-gradient-to-r from-brand-surface via-brand-card to-brand-surface border border-brand-border p-8 text-center space-y-4">
-                        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+                    <div className="rounded-3xl bg-[#072954] text-white p-8 sm:p-12 text-center space-y-4">
+                        <h3 className="font-serif text-2xl sm:text-3xl font-bold">
                             Institutional Retainers & Multi-Session Summits
                         </h3>
-                        <p className="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
-                            For state governments, federal ministries, bank conglomerates, and pan-African NGO consortia
+                        <p className="text-[#E8EDF4] text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
+                            For state governments, federal ministries, banking conglomerates, and pan-African NGO consortia
                             requiring ongoing advisory, executive board seats, or customized leadership transformation programs.
                         </p>
                         <div className="pt-2">
                             <Link
-                                href="/#booking"
-                                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-brand-gold hover:bg-brand-gold-hover text-black font-semibold text-xs uppercase tracking-wider transition-all duration-200 shadow-gold-glow"
+                                href="/contact"
+                                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-md"
                             >
                                 <Calendar className="w-4 h-4" />
                                 <span>Contact Executive Office for Retainer Quotes</span>
