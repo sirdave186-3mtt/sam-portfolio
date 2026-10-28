@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Calendar, ArrowRight, X, Filter, Building2, Sparkles } from "lucide-react";
+import { Calendar, ArrowRight, X, Filter, Building2, Sparkles, Camera, ShieldCheck } from "lucide-react";
 
 type Category = "all" | "masterclasses" | "retreats" | "summits" | "mentorship";
 
@@ -19,7 +19,6 @@ interface GalleryItem {
     description: string;
 }
 
-// Configured for the camera files from Dr. Sam's GMPC executive training sessions
 const GALLERY_ITEMS: GalleryItem[] = [
     {
         id: "gmpc-advanced-leadership",
@@ -107,24 +106,99 @@ export default function GalleryPage() {
             <main className="flex-1 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto space-y-12">
 
-                    {/* Header Banner */}
-                    <div className="max-w-3xl space-y-4">
-                        <div className="inline-flex items-center gap-2">
-                            <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
-                                FIELD IMPACT & MEDIA ARCHIVE
-                            </span>
+                    {/* Executive Split Header */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E8EDF4] pb-12">
+
+                        {/* Left Column: Heading & Executive Mission (7 cols) */}
+                        <div className="lg:col-span-7 space-y-5">
+                            <div className="inline-flex items-center gap-2">
+                                <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
+                                    FIELD IMPACT & MEDIA ARCHIVE
+                                </span>
+                            </div>
+
+                            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.12]">
+                                In Action: <br />
+                                <span className="italic text-[#CC9F58]">Masterclasses, Summits & Executive Retreats</span>
+                            </h1>
+
+                            <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed max-w-2xl">
+                                A visual chronicle of Dr. Immanuelson Sam facilitating institutional turnarounds,
+                                delivering keynotes, and mentoring high-level leaders across Africa.
+                            </p>
+
+                            <div className="pt-2 flex flex-wrap items-center gap-3">
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#072954] hover:bg-[#041A38] text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-xs"
+                                >
+                                    <Calendar className="w-4 h-4 text-[#CC9F58]" />
+                                    <span>Book Similar Session</span>
+                                </Link>
+                                <Link
+                                    href="/rates"
+                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-bold uppercase tracking-wider transition-all shadow-xs"
+                                >
+                                    <span>Review Rates</span>
+                                    <ArrowRight className="w-4 h-4 text-[#CC9F58]" />
+                                </Link>
+                            </div>
                         </div>
-                        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.15]">
-                            In Action: <br />
-                            <span className="italic text-[#CC9F58]">Masterclasses, Summits & Executive Retreats</span>
-                        </h1>
-                        <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed">
-                            A visual chronicle of Dr. Immanuelson Sam facilitating institutional turnarounds,
-                            delivering keynotes, and mentoring high-level leaders across Africa.
-                        </p>
+
+                        {/* Right Column: Media Archive Snapshot (5 cols) */}
+                        <div className="lg:col-span-5">
+                            <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF7F2] border border-[#E8EDF4] space-y-5 shadow-xs relative overflow-hidden">
+                                <div className="flex items-center justify-between border-b border-[#E8EDF4] pb-3">
+                                    <div className="flex items-center gap-2">
+                                        <Camera className="w-4 h-4 text-[#CC9F58]" />
+                                        <span className="text-[11px] font-bold uppercase tracking-widest text-[#072954]">
+                                            Archive Footprint & Reach
+                                        </span>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-[#4A5568]">GMPC-MEDIA</span>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">4 Tiers</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Masterclasses, Retreats, Summits & Mentorship</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">Corporate</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Banking, Conglomerates & Aviation Leadership</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">Gov</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">State Cabinets, Ministries & Agencies Advised</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">Cohort</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">The Becoming Incubator for Young Leaders</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] flex items-center justify-between text-xs">
+                                    <div className="space-y-0.5">
+                                        <p className="font-bold text-[#072954]">Host Dr. Sam</p>
+                                        <p className="text-[11px] text-[#4A5568]">Available for Pan-African & Global Milestones</p>
+                                    </div>
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#CC9F58] hover:text-[#072954] transition-colors"
+                                    >
+                                        <span>Book Now</span>
+                                        <ArrowRight className="w-3.5 h-3.5" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    {/* Category Filter Tabs */}
+                    {/* Filter Tabs */}
                     <div className="flex flex-wrap items-center gap-2 border-b border-[#E8EDF4] pb-4">
                         <div className="hidden sm:flex items-center gap-2 mr-2 text-xs text-[#072954] uppercase tracking-wider font-bold">
                             <Filter className="w-3.5 h-3.5 text-[#CC9F58]" />
@@ -144,7 +218,7 @@ export default function GalleryPage() {
                         ))}
                     </div>
 
-                    {/* Responsive Gallery Grid */}
+                    {/* Gallery Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredItems.map((item) => (
                             <div
@@ -152,7 +226,7 @@ export default function GalleryPage() {
                                 onClick={() => setSelectedItem(item)}
                                 className="group rounded-2xl bg-white border border-[#E8EDF4] hover:border-[#CC9F58] overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl flex flex-col justify-between shadow-xs"
                             >
-                                {/* Image Canvas Frame */}
+                                {/* Image Frame */}
                                 <div className="relative w-full aspect-[16/10] bg-[#FAF7F2] overflow-hidden">
                                     <Image
                                         src={item.imageSrc}
@@ -170,7 +244,7 @@ export default function GalleryPage() {
                                     </div>
                                 </div>
 
-                                {/* Card Context & Caption */}
+                                {/* Card Caption */}
                                 <div className="p-6 space-y-2.5 flex-1 flex flex-col justify-between">
                                     <div className="space-y-2">
                                         <div className="flex items-center justify-between text-[11px] text-[#4A5568]">
@@ -194,7 +268,7 @@ export default function GalleryPage() {
                         ))}
                     </div>
 
-                    {/* Interactive Lightbox Modal */}
+                    {/* Lightbox / Modal */}
                     {selectedItem && (
                         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#072954]/80 backdrop-blur-sm animate-in fade-in duration-200">
                             <div className="relative max-w-3xl w-full rounded-2xl bg-white border border-[#E8EDF4] overflow-hidden shadow-2xl">
@@ -217,7 +291,7 @@ export default function GalleryPage() {
                                     />
                                 </div>
 
-                                {/* Modal Context */}
+                                {/* Modal Details */}
                                 <div className="p-6 sm:p-8 space-y-3">
                                     <div className="flex items-center gap-2">
                                         <span className="px-2.5 py-0.5 rounded bg-[#CC9F58] text-[#072954] text-[10px] font-bold uppercase tracking-wider">
@@ -251,7 +325,7 @@ export default function GalleryPage() {
                             Host Dr. Immanuelson Sam at Your Organization
                         </h3>
                         <p className="text-[#E8EDF4] text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-                            Equip your board, executive management team, or corporate conference with battle-tested frameworks for sustainable growth and governance.
+                            Equip your board, executive team, or national conference with battle-tested frameworks for sustainable growth and governance.
                         </p>
                         <div className="pt-2">
                             <Link

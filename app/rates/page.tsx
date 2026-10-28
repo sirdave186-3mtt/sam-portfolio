@@ -19,7 +19,8 @@ import {
     ShieldCheck,
     Clock,
     CheckCircle2,
-    Sparkles
+    Sparkles,
+    Building2
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -164,21 +165,97 @@ export default function RatesPage() {
             <main className="flex-1 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto space-y-16">
 
-                    {/* Header Banner */}
-                    <div className="max-w-3xl space-y-4">
-                        <div className="inline-flex items-center gap-2">
-                            <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
-                                GOLDENMUV PREMIUM CONSULTING LIMITED
-                            </span>
+                    {/* Executive Split Header */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E8EDF4] pb-12">
+
+                        {/* Left Column: Heading & Executive Mission (7 cols) */}
+                        <div className="lg:col-span-7 space-y-5">
+                            <div className="inline-flex items-center gap-2">
+                                <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
+                                    GOLDENMUV PREMIUM CONSULTING LIMITED
+                                </span>
+                            </div>
+
+                            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.12]">
+                                Services & Booking <br />
+                                <span className="italic text-[#CC9F58]">Rate Card & Advisory Schedule</span>
+                            </h1>
+
+                            <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed max-w-2xl">
+                                Transparent, value-driven investment brackets for engaging Dr. Immanuelson Sam across
+                                keynote addresses, corporate masterclasses, executive retreats, and institutional advisory.
+                            </p>
+
+                            <div className="pt-2 flex flex-wrap items-center gap-3">
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#072954] hover:bg-[#041A38] text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-xs"
+                                >
+                                    <Calendar className="w-4 h-4 text-[#CC9F58]" />
+                                    <span>Request Custom Quote</span>
+                                </Link>
+                                <a
+                                    href="/docs/dr-immanuelson-sam-speaker-kit.pdf"
+                                    download
+                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-bold uppercase tracking-wider transition-all shadow-xs"
+                                >
+                                    <Download className="w-4 h-4 text-[#CC9F58]" />
+                                    <span>Download PDF Rate Card</span>
+                                </a>
+                            </div>
                         </div>
-                        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.1]">
-                            Services & Booking <br />
-                            <span className="italic text-[#CC9F58]">Rate Card & Advisory Schedule</span>
-                        </h1>
-                        <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed">
-                            Transparent, value-driven investment brackets for engaging Dr. Immanuelson Sam across
-                            keynote addresses, corporate masterclasses, executive retreats, and institutional advisory.
-                        </p>
+
+                        {/* Right Column: Rates & Investment Snapshot (5 cols) */}
+                        <div className="lg:col-span-5">
+                            <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF7F2] border border-[#E8EDF4] space-y-5 shadow-xs relative overflow-hidden">
+                                <div className="flex items-center justify-between border-b border-[#E8EDF4] pb-3">
+                                    <div className="flex items-center gap-2">
+                                        <ShieldCheck className="w-4 h-4 text-[#CC9F58]" />
+                                        <span className="text-[11px] font-bold uppercase tracking-widest text-[#072954]">
+                                            Engagement Terms & Tiers
+                                        </span>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-[#4A5568]">GMPC-RATES</span>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">₦500k+</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Keynote Speaking & Masterclass Base Brackets</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">10</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Practice Areas & Tailored Service Modules</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">Retainer</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Multi-Session Corporate & Board Retainers</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">24–48h</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Prompt Executive Proposal & Availability Review</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] flex items-center justify-between text-xs">
+                                    <div className="space-y-0.5">
+                                        <p className="font-bold text-[#072954]">Currency Standard</p>
+                                        <p className="text-[11px] text-[#4A5568]">Quoted in NGN (₦) • FX Invoicing on Request</p>
+                                    </div>
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#CC9F58] hover:text-[#072954] transition-colors"
+                                    >
+                                        <span>Inquire</span>
+                                        <ArrowRight className="w-3.5 h-3.5" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     {/* Rate Policy & Notes Card */}
@@ -256,7 +333,6 @@ export default function RatesPage() {
                                         )}
 
                                         <div className="space-y-4">
-                                            {/* Top Header: Number, Icon, Category */}
                                             <div className="flex items-center gap-3.5">
                                                 <div className="w-11 h-11 rounded-xl bg-[#FAF7F2] border border-[#E8EDF4] flex items-center justify-center text-[#CC9F58] group-hover:bg-[#CC9F58] group-hover:text-white transition-colors shrink-0">
                                                     <IconComponent className="w-5 h-5" />
@@ -274,7 +350,6 @@ export default function RatesPage() {
                                                 </div>
                                             </div>
 
-                                            {/* Pricing Highlight */}
                                             <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E8EDF4] flex items-baseline justify-between gap-2">
                                                 <span className="font-serif text-2xl font-bold text-[#072954] tracking-tight">
                                                     {service.rateRange}
@@ -284,20 +359,17 @@ export default function RatesPage() {
                                                 </span>
                                             </div>
 
-                                            {/* Duration Tag */}
                                             <div className="flex items-center gap-2 text-xs text-[#4A5568]">
                                                 <Clock className="w-3.5 h-3.5 text-[#CC9F58] shrink-0" />
                                                 <span className="font-bold text-[#072954]">Duration:</span>
                                                 <span>{service.duration}</span>
                                             </div>
 
-                                            {/* Service Overview */}
                                             <p className="text-xs sm:text-sm text-[#4A5568] leading-relaxed">
                                                 {service.overview}
                                             </p>
                                         </div>
 
-                                        {/* Card Footer CTA */}
                                         <div className="pt-4 border-t border-[#E8EDF4] flex items-center justify-between">
                                             <span className="text-[11px] text-[#4A5568] font-mono">
                                                 Item Ref: GMPC-{service.number}

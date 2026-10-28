@@ -10,7 +10,9 @@ import {
     Sparkles,
     Building2,
     Award,
-    Calendar
+    Calendar,
+    Download,
+    BookmarkCheck
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -54,21 +56,96 @@ export default function BooksPage() {
             <main className="flex-1 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto space-y-16">
 
-                    {/* Header Banner */}
-                    <div className="max-w-3xl space-y-4">
-                        <div className="inline-flex items-center gap-2">
-                            <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
-                                PUBLISHED WORKS & EXECUTIVE BLUEPRINTS
-                            </span>
+                    {/* Executive Split Header */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E8EDF4] pb-12">
+
+                        {/* Left Column: Heading & Executive Mission (7 cols) */}
+                        <div className="lg:col-span-7 space-y-5">
+                            <div className="inline-flex items-center gap-2">
+                                <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
+                                    PUBLISHED WORKS & EXECUTIVE BLUEPRINTS
+                                </span>
+                            </div>
+
+                            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.12]">
+                                Literary Thought Leadership & <br />
+                                <span className="italic text-[#CC9F58]">High-Performance Principles</span>
+                            </h1>
+
+                            <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed max-w-2xl">
+                                Dr. Immanuelson Sam&apos;s published works translate executive consulting frameworks
+                                into actionable handbooks for professionals, entrepreneurs, and institutions.
+                            </p>
+
+                            <div className="pt-2 flex flex-wrap items-center gap-3">
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#072954] hover:bg-[#041A38] text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-xs"
+                                >
+                                    <Building2 className="w-4 h-4 text-[#CC9F58]" />
+                                    <span>Request Corporate Bulk Order</span>
+                                </Link>
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-bold uppercase tracking-wider transition-all shadow-xs"
+                                >
+                                    <span>Order Individual Copy</span>
+                                    <ArrowRight className="w-4 h-4 text-[#CC9F58]" />
+                                </Link>
+                            </div>
                         </div>
-                        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.1]">
-                            Literary Thought Leadership & <br />
-                            <span className="italic text-[#CC9F58]">High-Performance Principles</span>
-                        </h1>
-                        <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed">
-                            Dr. Immanuelson Sam&apos;s published works translate executive consulting frameworks
-                            into actionable disciplines for leaders, entrepreneurs, and institutions.
-                        </p>
+
+                        {/* Right Column: Literary Snapshot Card (5 cols) */}
+                        <div className="lg:col-span-5">
+                            <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF7F2] border border-[#E8EDF4] space-y-5 shadow-xs relative overflow-hidden">
+                                <div className="flex items-center justify-between border-b border-[#E8EDF4] pb-3">
+                                    <div className="flex items-center gap-2">
+                                        <BookOpen className="w-4 h-4 text-[#CC9F58]" />
+                                        <span className="text-[11px] font-bold uppercase tracking-widest text-[#072954]">
+                                            Publication Profile
+                                        </span>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-[#4A5568]">ISBN-AUTH</span>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-xl sm:text-2xl font-bold text-[#072954]">Time Code</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Flagship Executive Operating Handbook[cite: 5]</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-xl sm:text-2xl font-bold text-[#072954]">MFR</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Foreword by Dr. Linus Okorie MFR[cite: 5]</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">12</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Actionable Core Strategy & Life Modules</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">50+</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Copies Qualify for Volume Institutional Rates</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] flex items-center justify-between text-xs">
+                                    <div className="space-y-0.5">
+                                        <p className="font-bold text-[#072954]">Author Keynote Bundles</p>
+                                        <p className="text-[11px] text-[#4A5568]">Bundled Book Deliveries + Executive Keynote</p>
+                                    </div>
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#CC9F58] hover:text-[#072954] transition-colors"
+                                    >
+                                        <span>Order</span>
+                                        <ArrowRight className="w-3.5 h-3.5" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     {/* Book Spotlight Card */}
@@ -107,7 +184,7 @@ export default function BooksPage() {
                             </div>
 
                             <p className="text-[#4A5568] text-sm sm:text-base leading-relaxed">
-                                The untold secrets of how ordinary people use time to build extraordinary lives.
+                                The untold secrets of how ordinary people use time to build extraordinary lives[cite: 5].
                                 Written not as a theoretical treatise, but as a battle-tested operating system
                                 unpacked from corporate boardrooms and governance institutions across Africa.
                             </p>
@@ -115,7 +192,7 @@ export default function BooksPage() {
                             <div className="space-y-2.5 text-xs sm:text-sm text-[#072954] font-medium">
                                 <div className="flex items-center gap-2.5">
                                     <CheckCircle2 className="w-4 h-4 text-[#CC9F58] shrink-0" />
-                                    <span>Stop wasting time and start living and leading with intention</span>
+                                    <span>Stop wasting time and start living and leading with intention[cite: 5]</span>
                                 </div>
                                 <div className="flex items-center gap-2.5">
                                     <CheckCircle2 className="w-4 h-4 text-[#CC9F58] shrink-0" />

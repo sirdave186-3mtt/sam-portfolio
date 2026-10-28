@@ -12,7 +12,11 @@ import {
     Landmark,
     CheckCircle2,
     Calendar,
-    FileText
+    FileText,
+    Building2,
+    ShieldCheck,
+    TrendingUp,
+    Download
 } from "lucide-react";
 import { ACCREDITATIONS } from "@/lib/constants";
 
@@ -57,27 +61,103 @@ export default function AboutPage() {
             <main className="flex-1 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto space-y-16">
 
-                    {/* Header Banner */}
-                    <div className="max-w-3xl space-y-4">
-                        <div className="inline-flex items-center gap-2">
-                            <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
-                                THE MANDATE & EXECUTIVE BIOGRAPHY
-                            </span>
+                    {/* Executive Split Header (Approach 1) */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E8EDF4] pb-12">
+
+                        {/* Left Column: Heading & Executive Mission (7 cols) */}
+                        <div className="lg:col-span-7 space-y-5">
+                            <div className="inline-flex items-center gap-2">
+                                <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
+                                    THE MANDATE & EXECUTIVE BIOGRAPHY
+                                </span>
+                            </div>
+
+                            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.12]">
+                                Equipping Leaders to <br />
+                                <span className="italic text-[#CC9F58]">Command Change & Uncertainty.</span>
+                            </h1>
+
+                            <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed max-w-2xl">
+                                Managing Partner at Goldenmuv Premium Consulting Limited (GMPC). Guiding executives,
+                                ministers, and visionary founders to turn macroeconomic volatility into enduring institutional opportunity.
+                            </p>
+
+                            <div className="pt-2 flex flex-wrap items-center gap-3">
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#072954] hover:bg-[#041A38] text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-xs"
+                                >
+                                    <Calendar className="w-4 h-4 text-[#CC9F58]" />
+                                    <span>Initiate Consultation</span>
+                                </Link>
+                                <a
+                                    href="/docs/dr-immanuelson-sam-speaker-kit.pdf"
+                                    download
+                                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-bold uppercase tracking-wider transition-all shadow-xs"
+                                >
+                                    <Download className="w-4 h-4 text-[#CC9F58]" />
+                                    <span>Executive Bio (PDF)</span>
+                                </a>
+                            </div>
                         </div>
-                        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.15]">
-                            Equipping Leaders to <br />
-                            <span className="italic text-[#CC9F58]">Command Change & Uncertainty.</span>
-                        </h1>
-                        <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed">
-                            Managing Partner at Goldenmuv Premium Consulting Limited (GMPC). Guiding executives,
-                            ministers, and visionary founders to turn volatility into enduring opportunity.
-                        </p>
+
+                        {/* Right Column: Executive Snapshot Panel (5 cols) */}
+                        <div className="lg:col-span-5">
+                            <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF7F2] border border-[#E8EDF4] space-y-5 shadow-xs relative overflow-hidden">
+                                <div className="flex items-center justify-between border-b border-[#E8EDF4] pb-3">
+                                    <div className="flex items-center gap-2">
+                                        <ShieldCheck className="w-4 h-4 text-[#CC9F58]" />
+                                        <span className="text-[11px] font-bold uppercase tracking-widest text-[#072954]">
+                                            Executive Pedigree at a Glance
+                                        </span>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-[#4A5568]">GMPC-REF</span>
+                                </div>
+
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">15+ Yrs</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">High-Stakes Banking & Corporate Advisory</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">50+</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Public Institutions & Corporate Boards Advised</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">CMC®</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Certified Management Consultant & Fellow (FIMC)</p>
+                                    </div>
+
+                                    <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">YALI</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Regional Leadership Fellow & Executive Coach</p>
+                                    </div>
+                                </div>
+
+                                <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] flex items-center justify-between text-xs">
+                                    <div className="space-y-0.5">
+                                        <p className="font-bold text-[#072954]">Managing Partner</p>
+                                        <p className="text-[11px] text-[#4A5568]">Goldenmuv Premium Consulting Ltd (GMPC)</p>
+                                    </div>
+                                    <Link
+                                        href="/rates"
+                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#CC9F58] hover:text-[#072954] transition-colors"
+                                    >
+                                        <span>Rates</span>
+                                        <ArrowRight className="w-3.5 h-3.5" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     {/* Core Biography Grid */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-                        {/* Left Column: Portrait & Credentials Card */}
+                        {/* Left Column: Portrait & Full Credentials Card */}
                         <div className="lg:col-span-5 space-y-6">
                             <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#CC9F58] shadow-xl bg-[#FAF7F2]">
                                 <Image
