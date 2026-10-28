@@ -19,8 +19,7 @@ import {
     ShieldCheck,
     Clock,
     CheckCircle2,
-    Sparkles,
-    Building2
+    Sparkles
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -45,75 +44,75 @@ const SERVICES_DATA: ServiceItem[] = [
     {
         number: "01",
         category: "Speaking",
-        title: "Keynote Speaking (Physical / In-Person)",
+        title: "Keynote Speaking (Physical)",
         rateRange: "₦500,000 – ₦3,000,000",
         unit: "per engagement",
         duration: "1–2 Hours (Customizable)",
         overview:
-            "Ignite corporate and institutional audiences with transformative paradigms on servant leadership, change, and risk management. Designed for summits, conferences, and board retreats.",
+            "Ignite corporate and institutional audiences with transformative paradigms on servant leadership, change, and risk management.",
         icon: Mic2,
         popular: true,
     },
     {
         number: "02",
         category: "Speaking",
-        title: "Keynote Speaking (Virtual Webinar)",
+        title: "Keynote Speaking (Virtual)",
         rateRange: "₦250,000 – ₦1,000,000",
         unit: "per engagement",
         duration: "1–2 Hours (Customizable)",
         overview:
-            "High-energy, interactive online keynotes unlocking organizational alignment and peak performance for global, remote, and distributed teams.",
+            "High-energy, interactive online keynotes unlocking organizational alignment and peak performance for global, remote teams.",
         icon: Video,
     },
     {
         number: "03",
         category: "Advisory",
-        title: "Strategic Advisory & Management Consulting",
+        title: "Strategic Advisory & Consulting",
         rateRange: "₦500,000 – ₦10,000,000",
-        unit: "hourly / session-based",
+        unit: "session / retainer",
         duration: "Session / Retainer",
         overview:
-            "Visionary executive guidance on organizational design, risk frameworks, institutional reforms, and sustainable value creation for leaders and ministers.",
+            "Visionary executive guidance on organizational design, risk frameworks, institutional reforms, and sustainable value creation.",
         icon: Compass,
         popular: true,
     },
     {
         number: "04",
         category: "Training",
-        title: "Leadership Development & Culture Transformation",
+        title: "Leadership & Culture Transformation",
         rateRange: "₦1,000,000 – ₦3,000,000",
         unit: "per workshop",
         duration: "Half-Day / Multi-Day",
         overview:
-            "Equip executive and managerial teams with servant leadership, emotional intelligence, and cultural shifts required for sustainable excellence and inclusion.",
+            "Equip executive and managerial teams with servant leadership, emotional intelligence, and cultural shifts for sustainable excellence.",
         icon: GraduationCap,
     },
     {
         number: "05",
         category: "Training",
-        title: "Human Capital Solutions & Team Optimization",
+        title: "Human Capital & Team Optimization",
         rateRange: "₦400,000 – ₦1,000,000",
         unit: "per session",
         duration: "Intensive Session",
         overview:
-            "Strategic talent attraction, retention architecture, and team optimization to dramatically eliminate productivity leaks and elevate engagement.",
+            "Strategic talent attraction, retention architecture, and team optimization to eliminate productivity leaks and elevate engagement.",
         icon: Users2,
     },
     {
         number: "06",
         category: "Advisory",
-        title: "Financial Services & Performance Advisory",
+        title: "Financial & Performance Advisory",
         rateRange: "₦300,000 – ₦2,000,000",
-        unit: "hourly / session-based",
+        unit: "session / advisory",
         duration: "Session / Advisory",
         overview:
-            "Leveraging 15+ years of high-stakes commercial banking expertise to guide capital planning, internal controls, and liquidity stability in volatile economies.",
+            "Leveraging 15+ years of banking expertise to guide capital planning, internal controls, and liquidity stability in volatile economies.",
         icon: TrendingUp,
     },
     {
         number: "07",
         category: "Training",
-        title: "Digital Transformation & Marketing Strategies",
+        title: "Digital Transformation Strategies",
         rateRange: "₦300,000 – ₦2,000,000",
         unit: "per workshop",
         duration: "Custom Workshop",
@@ -124,12 +123,12 @@ const SERVICES_DATA: ServiceItem[] = [
     {
         number: "08",
         category: "Advisory",
-        title: "Debt Recovery & Credit Management Advisory",
+        title: "Debt Recovery & Credit Advisory",
         rateRange: "₦400,000 – ₦1,500,000",
         unit: "project-based",
         duration: "Project Scope",
         overview:
-            "Ethical debt recovery architecture, structured credit underwriting diagnostics, and rigorous risk mitigation for sustainable balance-sheet health.",
+            "Ethical debt recovery architecture, structured credit underwriting diagnostics, and rigorous risk mitigation for balance-sheet health.",
         icon: ShieldAlert,
     },
     {
@@ -140,18 +139,18 @@ const SERVICES_DATA: ServiceItem[] = [
         unit: "project-based",
         duration: "Project Milestone",
         overview:
-            "Addressing the core structural bottlenecks of growing enterprises by implementing institutional workflows, governance models, and scalability engines.",
+            "Addressing core structural bottlenecks of growing enterprises by implementing institutional workflows, governance, and scalability.",
         icon: Store,
     },
     {
         number: "10",
         category: "Consultation",
-        title: "1-on-1 Executive Leadership Consultation",
+        title: "1-on-1 Executive Consultation",
         rateRange: "₦100,000 – ₦250,000",
         unit: "per 1-hour session",
         duration: "1 Hour (Packages Available)",
         overview:
-            "Confidential, high-clarity strategic counseling for C-suite leaders, founders, and public figures seeking personal breakthroughs and accountable execution.",
+            "Confidential, high-clarity strategic counseling for C-suite leaders, founders, and public figures seeking personal breakthroughs.",
         icon: UserCheck,
         popular: true,
     },
@@ -163,7 +162,7 @@ export default function RatesPage() {
             <Navbar />
 
             <main className="flex-1 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto space-y-16">
+                <div className="max-w-7xl mx-auto space-y-14">
 
                     {/* Executive Split Header */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E8EDF4] pb-12">
@@ -258,128 +257,119 @@ export default function RatesPage() {
 
                     </div>
 
-                    {/* Rate Policy & Notes Card */}
-                    <div className="rounded-3xl bg-[#FAF7F2] border border-[#E8EDF4] p-6 sm:p-10 shadow-sm relative overflow-hidden">
-                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                            <div className="md:col-span-8 space-y-4">
+                    {/* Rate Protocol Policy Banner */}
+                    <div className="rounded-2xl bg-[#FAF7F2] border border-[#E8EDF4] p-5 sm:p-7 shadow-xs">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                            <div className="lg:col-span-8 space-y-2">
                                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#072954]">
                                     <ShieldCheck className="w-4 h-4 text-[#CC9F58]" />
                                     <span>Standard Booking Protocol</span>
                                 </div>
-                                <h3 className="font-serif text-2xl font-bold text-[#072954]">
-                                    Engagement Guidelines & Customization
-                                </h3>
-                                <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A5568] leading-relaxed">
-                                    <li className="flex items-start gap-2.5">
-                                        <CheckCircle2 className="w-4 h-4 text-[#CC9F58] shrink-0 mt-0.5" />
-                                        <span>All rates are quoted in <strong>Nigerian Naira (₦)</strong> and tailored based on audience scale, institutional scope, geographic location, and depth.</span>
-                                    </li>
-                                    <li className="flex items-start gap-2.5">
-                                        <CheckCircle2 className="w-4 h-4 text-[#CC9F58] shrink-0 mt-0.5" />
-                                        <span>Fees exclude logistics, return flights, executive accommodation, and statutory VAT (unless bundled into corporate retainers).</span>
-                                    </li>
-                                    <li className="flex items-start gap-2.5">
-                                        <CheckCircle2 className="w-4 h-4 text-[#CC9F58] shrink-0 mt-0.5" />
-                                        <span><strong>Multi-session packages, corporate retainers, and institutional board retainers</strong> are available upon tailored request.</span>
-                                    </li>
-                                </ul>
+                                <p className="text-xs text-[#4A5568] leading-relaxed">
+                                    All rates are quoted in <strong>Nigerian Naira (₦)</strong> and tailored based on audience scale, institutional scope, and geographic travel. Fees exclude logistics and statutory VAT unless bundled into bespoke corporate retainers.
+                                </p>
                             </div>
 
-                            <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-center md:items-end">
+                            <div className="lg:col-span-4 flex flex-wrap gap-2.5 justify-start lg:justify-end">
                                 <Link
                                     href="/contact"
-                                    className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-sm"
+                                    className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
                                 >
-                                    <Calendar className="w-4 h-4" />
-                                    <span>Request Custom Quote</span>
+                                    <Calendar className="w-3.5 h-3.5" />
+                                    <span>Custom Quote</span>
                                 </Link>
-
                                 <a
                                     href="/docs/dr-immanuelson-sam-speaker-kit.pdf"
                                     download
-                                    className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all duration-200 shadow-xs"
+                                    className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
                                 >
-                                    <Download className="w-4 h-4 text-[#CC9F58]" />
-                                    <span>Download PDF Rate Card</span>
+                                    <Download className="w-3.5 h-3.5 text-[#CC9F58]" />
+                                    <span>Rate Card (PDF)</span>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    {/* Rates Grid: 10 Core Services */}
-                    <div className="space-y-8">
-                        <div className="flex items-center justify-between border-b border-[#E8EDF4] pb-4">
-                            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#072954]">
-                                Full Services Schedule
+                    {/* Compact 3-Column Rates Grid */}
+                    <div className="space-y-6">
+                        <div className="flex items-center justify-between border-b border-[#E8EDF4] pb-3">
+                            <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#072954]">
+                                Schedule of Services & Investment Brackets
                             </h2>
-                            <span className="text-xs uppercase tracking-wider text-[#4A5568] font-bold">
+                            <span className="text-xs font-bold uppercase tracking-wider text-[#CC9F58]">
                                 10 Practice Offerings
                             </span>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                             {SERVICES_DATA.map((service) => {
                                 const IconComponent = service.icon;
                                 return (
                                     <div
                                         key={service.number}
-                                        className="p-6 sm:p-7 rounded-2xl bg-white border border-[#E8EDF4] hover:border-[#CC9F58] transition-all duration-300 flex flex-col justify-between space-y-5 shadow-xs hover:shadow-lg relative group"
+                                        className="p-5 rounded-2xl bg-white border border-[#E8EDF4] hover:border-[#CC9F58] transition-all duration-200 flex flex-col justify-between space-y-4 shadow-xs hover:shadow-md group relative"
                                     >
-                                        {service.popular && (
-                                            <div className="absolute top-4 right-4 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#FAF7F2] border border-[#CC9F58]/40 text-[#072954] text-[10px] font-bold uppercase tracking-wider">
-                                                <Sparkles className="w-3 h-3 text-[#CC9F58]" />
-                                                <span>Core Practice</span>
-                                            </div>
-                                        )}
-
-                                        <div className="space-y-4">
-                                            <div className="flex items-center gap-3.5">
-                                                <div className="w-11 h-11 rounded-xl bg-[#FAF7F2] border border-[#E8EDF4] flex items-center justify-center text-[#CC9F58] group-hover:bg-[#CC9F58] group-hover:text-white transition-colors shrink-0">
-                                                    <IconComponent className="w-5 h-5" />
+                                        {/* Header Row: Badge & Ref */}
+                                        <div className="space-y-3">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <span className="text-[10px] font-mono font-bold text-[#4A5568]">#{service.number}</span>
+                                                    <span className="text-[9px] uppercase tracking-wider font-bold text-[#072954] px-2 py-0.5 rounded bg-[#FAF7F2] border border-[#E8EDF4]">
+                                                        {service.category}
+                                                    </span>
                                                 </div>
-                                                <div>
-                                                    <div className="flex items-center gap-2">
-                                                        <span className="text-[10px] font-mono font-bold text-[#4A5568]">#{service.number}</span>
-                                                        <span className="text-[10px] uppercase tracking-wider font-bold text-[#072954] px-2 py-0.5 rounded bg-[#FAF7F2] border border-[#E8EDF4]">
-                                                            {service.category}
-                                                        </span>
-                                                    </div>
-                                                    <h3 className="font-serif text-lg sm:text-xl font-bold text-[#072954] mt-1 group-hover:text-[#CC9F58] transition-colors leading-snug">
-                                                        {service.title}
-                                                    </h3>
-                                                </div>
+                                                {service.popular && (
+                                                    <span className="inline-flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider text-[#072954] px-2 py-0.5 rounded-full bg-[#FAF7F2] border border-[#CC9F58]/50">
+                                                        <Sparkles className="w-2.5 h-2.5 text-[#CC9F58]" />
+                                                        <span>Core</span>
+                                                    </span>
+                                                )}
                                             </div>
 
-                                            <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#E8EDF4] flex items-baseline justify-between gap-2">
-                                                <span className="font-serif text-2xl font-bold text-[#072954] tracking-tight">
+                                            {/* Title & Icon */}
+                                            <div className="flex items-start gap-3">
+                                                <div className="w-9 h-9 rounded-lg bg-[#FAF7F2] border border-[#E8EDF4] flex items-center justify-center text-[#CC9F58] group-hover:bg-[#CC9F58] group-hover:text-[#072954] transition-colors shrink-0 mt-0.5">
+                                                    <IconComponent className="w-4 h-4" />
+                                                </div>
+                                                <h3 className="font-serif text-base font-bold text-[#072954] group-hover:text-[#CC9F58] transition-colors leading-snug">
+                                                    {service.title}
+                                                </h3>
+                                            </div>
+
+                                            {/* Streamlined Price Display */}
+                                            <div className="border-y border-[#E8EDF4] py-2.5 flex items-baseline justify-between">
+                                                <span className="font-serif text-base sm:text-lg font-bold text-[#072954] tracking-tight">
                                                     {service.rateRange}
                                                 </span>
-                                                <span className="text-xs text-[#4A5568] font-medium capitalize">
+                                                <span className="text-[10px] text-[#4A5568] font-medium capitalize">
                                                     {service.unit}
                                                 </span>
                                             </div>
 
-                                            <div className="flex items-center gap-2 text-xs text-[#4A5568]">
-                                                <Clock className="w-3.5 h-3.5 text-[#CC9F58] shrink-0" />
-                                                <span className="font-bold text-[#072954]">Duration:</span>
-                                                <span>{service.duration}</span>
+                                            {/* Duration */}
+                                            <div className="flex items-center gap-1.5 text-[11px] text-[#4A5568]">
+                                                <Clock className="w-3 h-3 text-[#CC9F58] shrink-0" />
+                                                <span className="font-semibold text-[#072954]">Duration:</span>
+                                                <span className="truncate">{service.duration}</span>
                                             </div>
 
-                                            <p className="text-xs sm:text-sm text-[#4A5568] leading-relaxed">
+                                            {/* Overview */}
+                                            <p className="text-xs text-[#4A5568] leading-relaxed line-clamp-3">
                                                 {service.overview}
                                             </p>
                                         </div>
 
-                                        <div className="pt-4 border-t border-[#E8EDF4] flex items-center justify-between">
-                                            <span className="text-[11px] text-[#4A5568] font-mono">
-                                                Item Ref: GMPC-{service.number}
+                                        {/* Footer Action */}
+                                        <div className="pt-3 border-t border-[#E8EDF4] flex items-center justify-between text-xs">
+                                            <span className="text-[10px] text-[#4A5568] font-mono">
+                                                GMPC-{service.number}
                                             </span>
                                             <Link
                                                 href="/contact"
-                                                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#072954] group-hover:text-[#CC9F58] transition-colors"
+                                                className="inline-flex items-center gap-1 text-[11px] font-bold text-[#072954] group-hover:text-[#CC9F58] transition-colors"
                                             >
                                                 <span>Book Engagement</span>
-                                                <ArrowRight className="w-3.5 h-3.5 text-[#CC9F58]" />
+                                                <ArrowRight className="w-3 h-3 text-[#CC9F58] group-hover:translate-x-0.5 transition-transform" />
                                             </Link>
                                         </div>
                                     </div>
