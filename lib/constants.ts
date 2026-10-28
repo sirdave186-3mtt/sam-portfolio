@@ -24,18 +24,83 @@ export const ACCREDITATIONS = [
     "World Bank-Supported Digital Program Participant",
 ];
 
-export const CLIENT_LOGOS = [
-    "Bank of Agriculture (BOA)",
-    "Katsina State Government",
-    "FCTA Abuja",
-    "Government of Akwa Ibom State",
-    "Sokoto State Government",
-    "Mangal Cement",
-    "Rural Access and Mobility Project (RAMP)",
-    "Darma Rice Mills",
-    "Thrive Agric",
-    "MaxAir",
-    "Borno State Hotels Ltd",
+export interface ClientLogo {
+    name: string;
+    src: string;
+    alt: string;
+}
+
+export const CLIENT_LOGOS: ClientLogo[] = [
+    {
+        name: "Mangal Group",
+        src: "/images/logos/cred_mangal.png",
+        alt: "Mangal Cement & Mangal Group",
+    },
+    {
+        name: "Rano Air",
+        src: "/images/logos/Rano_Air.png",
+        alt: "Rano Air",
+    },
+    {
+        name: "Transkredit",
+        src: "/images/logos/Transkredit.png",
+        alt: "Transkredit Financial Services",
+    },
+    {
+        name: "Norrenberger",
+        src: "/images/logos/Norrenberger.png",
+        alt: "Norrenberger Financial Group",
+    },
+    {
+        name: "NASIDA",
+        src: "/images/logos/cred_nasida.png",
+        alt: "Nasarawa Investment and Development Agency (NASIDA)",
+    },
+    {
+        name: "FUDMA",
+        src: "/images/logos/cred_fudma.png",
+        alt: "Federal University Dutsin-Ma",
+    },
+    {
+        name: "Iphex Global",
+        src: "/images/logos/Iphex-Global.png",
+        alt: "Iphex Global",
+    },
+    {
+        name: "Bezalel",
+        src: "/images/logos/Bezalel.png",
+        alt: "Bezalel",
+    },
+    {
+        name: "Kindred",
+        src: "/images/logos/kindred-logo.png",
+        alt: "Kindred",
+    },
+    {
+        name: "Corporate Partner 21",
+        src: "/images/logos/Picture21.png",
+        alt: "Institutional Client Partner",
+    },
+    {
+        name: "Corporate Partner 22",
+        src: "/images/logos/Picture22.jpg",
+        alt: "Institutional Client Partner",
+    },
+    {
+        name: "Corporate Partner 24",
+        src: "/images/logos/Picture24.jpg",
+        alt: "Institutional Client Partner",
+    },
+    {
+        name: "Corporate Partner 26",
+        src: "/images/logos/Picture26.png",
+        alt: "Institutional Client Partner",
+    },
+    {
+        name: "Corporate Partner 29",
+        src: "/images/logos/Picture29.png",
+        alt: "Institutional Client Partner",
+    },
 ];
 
 export const SIGNATURE_TOPICS = [
