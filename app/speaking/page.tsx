@@ -316,7 +316,7 @@ export default function SpeakingPage() {
 
                     {/* Bottom Retainer CTA */}
                     <div className="rounded-3xl bg-[#072954] text-white p-8 sm:p-12 text-center space-y-4">
-                        <h3 className="font-serif text-2xl sm:text-3xl font-bold">
+                        <h3 className="font-serif text-2xl sm:text-3xl font-bold !text-white">
                             Secure Dr. Immanuelson Sam for Your Event
                         </h3>
                         <p className="text-[#E8EDF4] text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">

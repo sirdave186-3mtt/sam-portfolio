@@ -390,7 +390,7 @@ export default function RatesPage() {
 
                     {/* Bottom Retainer Callout */}
                     <div className="rounded-3xl bg-[#072954] text-white p-8 sm:p-12 text-center space-y-4">
-                        <h3 className="font-serif text-2xl sm:text-3xl font-bold">
+                        <h3 className="font-serif text-2xl sm:text-3xl font-bold !text-white">
                             Institutional Retainers & Multi-Session Summits
                         </h3>
                         <p className="text-[#E8EDF4] text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">

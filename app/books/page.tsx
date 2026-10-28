@@ -256,8 +256,8 @@ export default function BooksPage() {
 
                     {/* Corporate Bulk Orders Notice */}
                     <div className="rounded-3xl bg-[#072954] text-white p-8 sm:p-12 text-center space-y-4">
-                        <h3 className="font-serif text-2xl sm:text-3xl font-bold">
-                            Equip Your Leadership Team with "The Time Code"
+                        <h3 className="font-serif text-2xl sm:text-3xl font-bold !text-white">
+                            Equip Your Leadership Team with &quot;The Time Code&quot;
                         </h3>
                         <p className="text-[#E8EDF4] text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
                             Special institutional volume rates and customized author keynote sessions are available

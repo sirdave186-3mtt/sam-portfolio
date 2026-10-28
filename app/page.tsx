@@ -118,30 +118,45 @@ export default function HomePage() {
         <BookSpotlight />
 
         {/* 6. High-Trust Booking Callout */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#072954] text-white text-center">
-          <div className="max-w-4xl mx-auto space-y-6">
-            <span className="inline-block px-3 py-1 rounded-full bg-white/10 text-[#CC9F58] text-[10px] font-bold uppercase tracking-widest border border-white/10">
-              Executive Advisory & Speaking
-            </span>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold">
-              Engage Dr. Immanuelson Sam for Your Next Milestone
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#072954] text-white relative overflow-hidden">
+          {/* Subtle ambient luxury gold glow */}
+          <div className="absolute inset-0 pointer-events-none opacity-25">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#CC9F58] rounded-full blur-[130px]" />
+          </div>
+
+          <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#CC9F58] text-[10px] font-bold uppercase tracking-[0.2em]">
+              <span>Executive Advisory & Speaking</span>
+            </div>
+
+            {/* Heading */}
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.2]">
+              Engage Dr. Immanuelson Sam for <br className="hidden sm:inline" />
+              <span className="italic text-[#CC9F58]">Your Next Milestone</span>
             </h2>
-            <p className="text-[#E8EDF4] text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+
+            {/* Description */}
+            <p className="text-[#E8EDF4] text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
               From physical summit keynotes and board retreats to confidential C-suite advisory,
               partner with Dr. Sam to turn uncertainty into institutional triumph.
             </p>
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+            {/* Buttons */}
+            <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto px-8 py-4 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-md"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-lg hover:shadow-xl active:scale-[0.98]"
               >
-                Initiate Booking Inquiry
+                <span>Initiate Booking Inquiry</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
+
               <Link
                 href="/rates"
-                className="w-full sm:w-auto px-8 py-4 rounded-lg border border-white/40 hover:border-white text-white text-xs font-semibold uppercase tracking-wider transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-white/30 hover:border-white bg-white/5 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition-all duration-200 active:scale-[0.98]"
               >
-                Review Rate Schedule
+                <span>Review Rate Schedule</span>
               </Link>
             </div>
           </div>
