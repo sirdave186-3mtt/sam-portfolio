@@ -5,11 +5,11 @@ import { CLIENT_LOGOS } from "@/lib/constants";
 import { Building2 } from "lucide-react";
 
 export default function LogoMarquee() {
-    // Duplicating the 14-item list ensures an unbroken loop across all viewport widths
+    // Duplicating the list ensures a continuous, unbroken scroll across all screen sizes
     const marqueeItems = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
     return (
-        <section className="w-full py-10 bg-[#E8EDF4] border-b border-[#CDD4DD] overflow-hidden">
+        <section className="w-full py-12 bg-[#E8EDF4] border-b border-[#CDD4DD] overflow-hidden">
             <style>{`
         @keyframes marqueeScroll {
           0% {
@@ -29,7 +29,7 @@ export default function LogoMarquee() {
         }
       `}</style>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-5">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
                 <div className="flex items-center gap-2">
                     <Building2 className="w-4 h-4 text-[#CC9F58]" />
                     <p className="text-[11px] font-bold uppercase tracking-widest text-[#072954]">
@@ -38,21 +38,22 @@ export default function LogoMarquee() {
                 </div>
             </div>
 
-            {/* Infinite Scrolling Track with Gradient Edge Masks */}
-            <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                <div className="marquee-track flex items-center gap-5 sm:gap-7">
+            {/* Infinite Scrolling Track with Subtle Edge Masks */}
+            <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+                <div className="marquee-track flex items-center gap-6 sm:gap-8">
                     {marqueeItems.map((client, idx) => (
                         <div
                             key={`${client.name}-${idx}`}
-                            className="flex items-center justify-center px-5 py-3 rounded-xl bg-white border border-[#CDD4DD] shadow-xs hover:border-[#CC9F58] hover:shadow-md transition-all duration-300 group shrink-0 min-w-[140px] sm:min-w-[170px] h-16 sm:h-20"
+                            className="flex items-center justify-center px-6 py-4 rounded-2xl bg-white border border-[#CDD4DD] shadow-xs hover:border-[#CC9F58] hover:shadow-lg transition-all duration-300 group shrink-0 min-w-[190px] sm:min-w-[230px] h-20 sm:h-24"
                         >
-                            <div className="relative w-28 sm:w-36 h-9 sm:h-11 flex items-center justify-center">
+                            {/* Scaled-up Logo Frame with Full Color and Sharp Contrast */}
+                            <div className="relative w-36 sm:w-44 h-12 sm:h-14 flex items-center justify-center">
                                 <Image
                                     src={client.src}
                                     alt={client.alt}
                                     fill
-                                    sizes="(max-width: 640px) 120px, 160px"
-                                    className="object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                                    sizes="(max-width: 640px) 150px, 200px"
+                                    className="object-contain transition-transform duration-300 group-hover:scale-105"
                                 />
                             </div>
                         </div>
