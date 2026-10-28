@@ -1,34 +1,28 @@
-export const SITE_METADATA = {
-    name: "Dr. Immanuelson Sam",
-    title: "Management Consultant, Leadership Coach & Global Speaker",
-    tagline: "Unlocking Leadership Potential... Empowering Africa's Future in Uncertain Times",
-    firm: "Goldenmuv Premium Consulting Limited (GMPC)",
-    firmWebsite: "https://www.goldenmuv.com",
-    phone: "+234-9060141044",
-    email: "Samimmanuelson@gmail.com",
-    socials: {
-        linkedin: "https://linkedin.com/in/immanuelsonsam",
-        instagram: "https://instagram.com/immanuelsonsam",
-        facebook: "https://facebook.com/immanuelsonsam",
-    },
-    ecosystemUrl: "https://becomerscommunity.com",
-};
-
-export const ACCREDITATIONS = [
-    "Certified Management Consultant (CMC)",
-    "Young African Leaders Initiative (YALI) Fellow",
-    "Certified Leadership Coach",
-    "Certified Executive Coach",
-    "Member, Nigerian Institute of Management (NIM)",
-    "Institute of Chartered Management Consultants",
-    "World Bank-Supported Digital Program Participant",
-];
-
 export interface ClientLogo {
     name: string;
     src: string;
     alt: string;
 }
+
+export const SITE_METADATA = {
+    title: "Dr. Immanuelson Sam | Global Speaker & Management Consultant",
+    description:
+        "Official website of Dr. Immanuelson Sam. Managing Partner at Goldenmuv Premium Consulting, Certified Management Consultant, author of The Time Code, and leadership coach.",
+    email: "Samimmanuelson@gmail.com",
+    phone: "+234 803 644 6500",
+    firmWebsite: "https://goldenmuv.com",
+    becomingCommunityWebsite: "https://becomerscommunity.com",
+    ecosystemUrl: "https://becomerscommunity.com", // Alias to prevent property errors
+};
+
+export const ACCREDITATIONS = [
+    "Certified Management Consultant (CMC) — International Council of Management Consulting Institutes",
+    "Fellow, Institute of Management Consultants (FIMC)",
+    "Young African Leaders Initiative (YALI) Regional Leadership Fellow",
+    "Managing Partner, Goldenmuv Premium Consulting Limited (GMPC)",
+    "Founder & Lead Convener, The Becoming Community",
+    "Member, Nigerian Institute of Management (Chartered)",
+];
 
 export const CLIENT_LOGOS: ClientLogo[] = [
     {
@@ -69,7 +63,7 @@ export const CLIENT_LOGOS: ClientLogo[] = [
     {
         name: "Bezalel",
         src: "/images/logos/Bezalel.png",
-        alt: "Bezalel",
+        alt: "Bezalel Consulting",
     },
     {
         name: "Kindred",
@@ -77,59 +71,28 @@ export const CLIENT_LOGOS: ClientLogo[] = [
         alt: "Kindred",
     },
     {
-        name: "Corporate Partner 21",
+        name: "TASTIA",
         src: "/images/logos/Picture21.png",
-        alt: "Institutional Client Partner",
+        alt: "Tastia Restaurant and Bakery",
     },
     {
-        name: "Corporate Partner 22",
+        name: "SHAMIES",
         src: "/images/logos/Picture22.jpg",
-        alt: "Institutional Client Partner",
+        alt: "Shamies Unusual Hearts Foundation",
     },
     {
-        name: "Corporate Partner 24",
+        name: "AFDIN",
         src: "/images/logos/Picture24.jpg",
-        alt: "Institutional Client Partner",
+        alt: "Afdin Group of Companies",
     },
     {
-        name: "Corporate Partner 26",
+        name: "FERMA",
         src: "/images/logos/Picture26.png",
-        alt: "Institutional Client Partner",
+        alt: "Federal Road Maintenance Agency (FERMA)",
     },
     {
-        name: "Corporate Partner 29",
+        name: "ILLMI",
         src: "/images/logos/Picture29.png",
-        alt: "Institutional Client Partner",
+        alt: "Illmi Children's Fund (ICF)",
     },
 ];
-
-export const SIGNATURE_TOPICS = [
-    {
-        title: "Servant Leadership in Emerging Markets",
-        focus: "Empowering leaders to serve humbly and build high-performance, inclusive teams across Africa's dynamic economies.",
-    },
-    {
-        title: "Navigating Organizational Change for Sustainable Impact",
-        focus: "Blending strategic risk management, innovation, and culture shifts to thrive amid macroeconomic volatility.",
-    },
-    {
-        title: "Building Future-Ready Leaders in Africa",
-        focus: "Equipping executives with practical frameworks for economic inclusion, resilience, and ethical governance.",
-    },
-    {
-        title: "Culture Transformation & Team Empowerment",
-        focus: "Unlocking emotional intelligence, organizational design, and productivity for thriving institutional workplaces.",
-    },
-    {
-        title: "Strategic Risk Management in Volatile Economies",
-        focus: "Performance optimization, stakeholder value creation, and institutional resilience.",
-    },
-];
-
-export const ENGAGEMENT_TYPES = [
-    { label: "Keynote Speaking (In-Person / Physical)", value: "keynote_physical" },
-    { label: "Keynote Speaking (Virtual Webinar)", value: "keynote_virtual" },
-    { label: "Strategic Advisory & Management Consulting", value: "strategic_advisory" },
-    { label: "Leadership Development & Culture Training", value: "leadership_training" },
-    { label: "1-on-1 Executive Leadership Consultation", value: "executive_coaching" },
-] as const;

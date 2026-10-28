@@ -1,98 +1,117 @@
-import { ArrowUpRight, Flame, Target, Users, Compass } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowUpRight, Users, Sparkles, Compass, HeartHandshake, ArrowRight } from "lucide-react";
 import { SITE_METADATA } from "@/lib/constants";
 
 export default function BecomingSection() {
     const pillars = [
         {
-            icon: Target,
-            title: "Mindset & Identity Engineering",
-            description: "Dismantling limiting self-constructs to align individuals with their highest capacity for leadership and societal contribution.",
-        },
-        {
-            icon: Users,
-            title: "Vibrant Community Synergy",
-            description: "Connecting African changemakers, corporate climbers, and creative visionaries across borders to collaborate and scale impact.",
+            icon: Sparkles,
+            title: "Purpose & Identity Architecture",
+            description: "Guiding emerging leaders to discover clarity of calling, inner alignment, and long-term vision.",
         },
         {
             icon: Compass,
-            title: "Purpose-to-Execution Mentorship",
-            description: "Translating inner convictions and spiritual depth into measurable milestones, ethical ventures, and generational legacy.",
+            title: "Strategic Execution & Mastery",
+            description: "Equipping changemakers with personal operating systems, temporal discipline, and focus.",
+        },
+        {
+            icon: HeartHandshake,
+            title: "Ethical Servant Stewardship",
+            description: "Instilling deep character, empathy, and institutional integrity across diverse sectors.",
         },
     ];
 
     return (
-        <section id="ecosystem" className="py-14 sm:py-16 px-4 sm:px-6 lg:px-8 bg-brand-bg border-t border-brand-border relative overflow-hidden">
-            <div className="max-w-7xl mx-auto space-y-12 relative">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white border-b border-[#E8EDF4]">
+            <div className="max-w-7xl mx-auto space-y-12">
+
+                {/* Section Header */}
                 <div className="max-w-3xl space-y-3">
-                    <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-gold">
-                        <span className="w-6 h-[1px] bg-brand-gold" />
-                        The Leadership Ecosystem
+                    <div className="inline-flex items-center gap-2">
+                        <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
+                            CONTINENTAL MENTORSHIP ECOSYSTEM
+                        </span>
                     </div>
-                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-                        The Becoming Community: <br />
-                        <span className="text-brand-gold italic">Awakening Africa&apos;s Next Generation</span>
+                    <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#072954]">
+                        The Becoming Community
                     </h2>
-                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Beyond corporate boardrooms and institutional advisory, Dr. Immanuelson Sam stewards
-                        <strong> The Becoming Community</strong>—a transformational incubator dedicated to nurturing future-ready
-                        leaders equipped with character, competence, and clarity.
+                    <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed">
+                        A pan-African leadership incubator founded by Dr. Immanuelson Sam, dedicated to raising purpose-driven,
+                        future-ready changemakers equipped with character and execution capabilities.
                     </p>
                 </div>
 
-                <div className="rounded-3xl bg-gradient-to-br from-brand-surface via-brand-card to-brand-bg border border-brand-gold-border/40 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                        <div className="lg:col-span-7 space-y-5">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold-border text-brand-gold text-[11px] font-semibold uppercase tracking-wider">
-                                <Flame className="w-3.5 h-3.5" />
-                                <span>The Flagship Mentorship Movement</span>
-                            </div>
-
-                            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
-                                Where Purpose Meets Discipline & Community
+                {/* Highlight Card */}
+                <div className="rounded-3xl bg-[#FAF7F2] border border-[#E8EDF4] p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xs">
+                    <div className="lg:col-span-8 space-y-6">
+                        <div className="space-y-3">
+                            <span className="inline-block px-3 py-1 rounded-full bg-white border border-[#E8EDF4] text-[#072954] text-[10px] font-bold uppercase tracking-wider">
+                                Generational Impact
+                            </span>
+                            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#072954]">
+                                Transforming Potential into Institutional Leadership
                             </h3>
-
-                            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                                The Becoming is where seekers, young professionals, and emerging founders gather for immersive masterclasses,
-                                accountability circles, and character-building mentorship led directly by Dr. Sam. It is more than a network—it
-                                is an intentional pathway toward personal mastery and societal impact.
+                            <p className="text-sm sm:text-base text-[#4A5568] leading-relaxed">
+                                Through structured cohort programs, masterclasses, and hands-on civic projects, The Becoming Community
+                                bridges the divide between raw talent and executive competence for young leaders across Africa.
                             </p>
-
-                            <div className="pt-1">
-                                <a
-                                    href={SITE_METADATA.ecosystemUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-gold hover:bg-brand-gold-hover text-black font-semibold text-xs uppercase tracking-wider transition-all duration-200 shadow-gold-glow"
-                                >
-                                    <span>Enter The Becoming Community</span>
-                                    <ArrowUpRight className="w-4 h-4" />
-                                </a>
-                            </div>
                         </div>
 
-                        <div className="lg:col-span-5 grid grid-cols-1 gap-3.5">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
                             {pillars.map((pillar, idx) => {
                                 const Icon = pillar.icon;
                                 return (
-                                    <div
-                                        key={idx}
-                                        className="p-4 rounded-xl bg-brand-bg/90 border border-brand-border hover:border-brand-gold-border/60 transition-colors space-y-1.5"
-                                    >
-                                        <div className="flex items-center gap-2.5">
-                                            <div className="p-1.5 rounded-lg bg-brand-surface text-brand-gold border border-brand-border">
-                                                <Icon className="w-3.5 h-3.5" />
-                                            </div>
-                                            <h4 className="font-semibold text-white text-xs sm:text-sm">{pillar.title}</h4>
+                                    <div key={idx} className="p-4 rounded-xl bg-white border border-[#E8EDF4] space-y-2 shadow-xs">
+                                        <div className="w-8 h-8 rounded-lg bg-[#FAF7F2] flex items-center justify-center text-[#CC9F58]">
+                                            <Icon className="w-4 h-4" />
                                         </div>
-                                        <p className="text-[11px] sm:text-xs text-slate-400 leading-relaxed pl-9">
-                                            {pillar.description}
-                                        </p>
+                                        <h4 className="font-serif text-sm font-bold text-[#072954]">{pillar.title}</h4>
+                                        <p className="text-xs text-[#4A5568] leading-relaxed">{pillar.description}</p>
                                     </div>
                                 );
                             })}
                         </div>
+
+                        <div className="pt-2 flex flex-wrap items-center gap-4">
+                            <a
+                                href={SITE_METADATA.becomingCommunityWebsite || SITE_METADATA.ecosystemUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#072954] hover:bg-[#041A38] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-sm"
+                            >
+                                <span>Visit The Becoming Platform</span>
+                                <ArrowUpRight className="w-4 h-4 text-[#CC9F58]" />
+                            </a>
+
+                            <Link
+                                href="/gallery"
+                                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
+                            >
+                                <span>View Mentorship Photos</span>
+                                <ArrowRight className="w-4 h-4 text-[#CC9F58]" />
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="lg:col-span-4 flex justify-center">
+                        <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-[#E8EDF4] shadow-md bg-[#072954]">
+                            <Image
+                                src="/images/speaking-stage.jpg"
+                                alt="Dr. Immanuelson Sam Mentoring at The Becoming Community"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 400px"
+                                className="object-cover object-center"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#072954]/80 via-transparent to-transparent" />
+                            <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-[#E8EDF4]">
+                                <p className="text-[10px] uppercase font-bold text-[#CC9F58] tracking-widest">Cohort Sessions</p>
+                                <p className="text-xs font-semibold text-[#072954]">Active Cohort & Community Forums</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );
