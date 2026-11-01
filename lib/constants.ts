@@ -7,19 +7,20 @@ export interface ClientLogo {
 export const SITE_METADATA = {
     title: "Dr. Immanuelson Sam | Global Speaker & Management Consultant",
     description:
-        "Official website of Dr. Immanuelson Sam. Managing Partner at Goldenmuv Premium Consulting, Certified Management Consultant, author of The Time Code, and leadership coach.",
+        "Official website of Dr. Immanuelson Sam. Certified Management Consultant, author of The Time Code, and leadership coach.",
     email: "Samimmanuelson@gmail.com",
-    phone: "+234 803 644 6500",
+    phone: "+234 906 014 1044",
     firmWebsite: "https://goldenmuv.com",
     becomingCommunityWebsite: "https://becomerscommunity.com",
-    ecosystemUrl: "https://becomerscommunity.com", // Alias to prevent property errors
+    ecosystemUrl: "https://becomerscommunity.com",
 };
+
+export const STANDARDIZED_TITLE =
+    "Certified Management Consultant || Global Speaker || African Mentor";
 
 export const ACCREDITATIONS = [
     "Certified Management Consultant (CMC) — International Council of Management Consulting Institutes",
     "Fellow, Institute of Management Consultants (FIMC)",
-    "Young African Leaders Initiative (YALI) Regional Leadership Fellow",
-    "Managing Partner, Goldenmuv Premium Consulting Limited (GMPC)",
     "Founder & Lead Convener, The Becoming Community",
     "Member, Nigerian Institute of Management (Chartered)",
 ];

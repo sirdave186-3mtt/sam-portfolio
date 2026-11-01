@@ -35,7 +35,7 @@ export default function Navbar() {
                                 alt="Dr. Immanuelson Sam Official Logo"
                                 fill
                                 priority
-                                sizes="48px"
+                                sizes="40px"
                                 className="object-contain"
                             />
                         </div>
@@ -68,8 +68,8 @@ export default function Navbar() {
                                     key={link.label}
                                     href={link.href}
                                     className={`text-xs uppercase tracking-wider font-semibold transition-colors py-1 border-b-2 ${isActive(link.href)
-                                            ? "text-[#CC9F58] border-[#CC9F58]"
-                                            : "text-[#072954] border-transparent hover:text-[#CC9F58]"
+                                        ? "text-[#CC9F58] border-[#CC9F58]"
+                                        : "text-[#072954] border-transparent hover:text-[#CC9F58]"
                                         }`}
                                 >
                                     {link.label}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Users, Sparkles, Compass, HeartHandshake, ArrowRight } from "lucide-react";
+import { ArrowUpRight, Sparkles, Compass, HeartHandshake } from "lucide-react";
 import { SITE_METADATA } from "@/lib/constants";
 
 export default function BecomingSection() {
@@ -73,9 +73,10 @@ export default function BecomingSection() {
                             })}
                         </div>
 
+                        {/* CTAs: Both point to the Becoming Community Website */}
                         <div className="pt-2 flex flex-wrap items-center gap-4">
                             <a
-                                href={SITE_METADATA.becomingCommunityWebsite || SITE_METADATA.ecosystemUrl}
+                                href={SITE_METADATA.becomingCommunityWebsite}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#072954] hover:bg-[#041A38] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-sm"
@@ -84,13 +85,15 @@ export default function BecomingSection() {
                                 <ArrowUpRight className="w-4 h-4 text-[#CC9F58]" />
                             </a>
 
-                            <Link
-                                href="/gallery"
+                            <a
+                                href={SITE_METADATA.becomingCommunityWebsite}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
                             >
-                                <span>View Mentorship Photos</span>
-                                <ArrowRight className="w-4 h-4 text-[#CC9F58]" />
-                            </Link>
+                                <span>View Community & Gallery</span>
+                                <ArrowUpRight className="w-4 h-4 text-[#CC9F58]" />
+                            </a>
                         </div>
                     </div>
 

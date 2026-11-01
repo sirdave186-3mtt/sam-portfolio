@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import {
     Award,
     ArrowRight,
+    ArrowUpRight,
     Compass,
     Briefcase,
     Users2,
@@ -13,17 +14,15 @@ import {
     CheckCircle2,
     Calendar,
     FileText,
-    Building2,
     ShieldCheck,
-    TrendingUp,
     Download
 } from "lucide-react";
-import { ACCREDITATIONS } from "@/lib/constants";
+import { ACCREDITATIONS, SITE_METADATA, STANDARDIZED_TITLE } from "@/lib/constants";
 
 export const metadata: Metadata = {
     title: "The Mandate & Executive Biography | Dr. Immanuelson Sam",
     description:
-        "Explore the biography, career trajectory, and leadership philosophy of Dr. Immanuelson Sam—Managing Partner at Goldenmuv Premium Consulting, Certified Management Consultant, and YALI Fellow.",
+        "Explore the biography, career trajectory, and leadership philosophy of Dr. Immanuelson Sam—Certified Management Consultant, global keynote speaker, and leadership coach.",
 };
 
 export default function AboutPage() {
@@ -61,7 +60,7 @@ export default function AboutPage() {
             <main className="flex-1 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto space-y-16">
 
-                    {/* Executive Split Header (Approach 1) */}
+                    {/* Executive Split Header */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E8EDF4] pb-12">
 
                         {/* Left Column: Heading & Executive Mission (7 cols) */}
@@ -78,8 +77,8 @@ export default function AboutPage() {
                             </h1>
 
                             <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed max-w-2xl">
-                                Managing Partner at Goldenmuv Premium Consulting Limited (GMPC). Guiding executives,
-                                ministers, and visionary founders to turn macroeconomic volatility into enduring institutional opportunity.
+                                Guiding corporate executives, ministers, and visionary founders to turn
+                                macroeconomic volatility into enduring institutional capability and measurable triumph.
                             </p>
 
                             <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -111,12 +110,12 @@ export default function AboutPage() {
                                             Executive Pedigree at a Glance
                                         </span>
                                     </div>
-                                    <span className="text-[10px] font-mono text-[#4A5568]">GMPC-REF</span>
+                                    <span className="text-[10px] font-mono text-[#4A5568]">EXEC-REF</span>
                                 </div>
 
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
-                                        <span className="font-serif text-2xl font-bold text-[#072954]">15+ Yrs</span>
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">~20 Yrs</span>
                                         <p className="text-[11px] text-[#4A5568] leading-tight">High-Stakes Banking & Corporate Advisory</p>
                                     </div>
 
@@ -131,19 +130,28 @@ export default function AboutPage() {
                                     </div>
 
                                     <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
-                                        <span className="font-serif text-2xl font-bold text-[#072954]">YALI</span>
-                                        <p className="text-[11px] text-[#4A5568] leading-tight">Regional Leadership Fellow & Executive Coach</p>
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">Mentor</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Continental Leadership Coach & Keynote Speaker</p>
                                     </div>
                                 </div>
 
+                                {/* Firm Link Only (Preserved) */}
                                 <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] flex items-center justify-between text-xs">
                                     <div className="space-y-0.5">
-                                        <p className="font-bold text-[#072954]">Managing Partner</p>
-                                        <p className="text-[11px] text-[#4A5568]">Goldenmuv Premium Consulting Ltd (GMPC)</p>
+                                        <p className="font-bold text-[#072954]">Management Consulting Practice</p>
+                                        <a
+                                            href={SITE_METADATA.firmWebsite}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-[11px] text-[#CC9F58] hover:underline inline-flex items-center gap-1 font-medium"
+                                        >
+                                            <span>Goldenmuv Consulting Firm</span>
+                                            <ArrowUpRight className="w-3 h-3" />
+                                        </a>
                                     </div>
                                     <Link
                                         href="/rates"
-                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#CC9F58] hover:text-[#072954] transition-colors"
+                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#072954] hover:text-[#CC9F58] transition-colors"
                                     >
                                         <span>Rates</span>
                                         <ArrowRight className="w-3.5 h-3.5" />
@@ -157,17 +165,26 @@ export default function AboutPage() {
                     {/* Core Biography Grid */}
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-                        {/* Left Column: Portrait & Full Credentials Card */}
+                        {/* Left Column: Portrait, Standardized Subtitle & Credentials Card */}
                         <div className="lg:col-span-5 space-y-6">
-                            <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#CC9F58] shadow-xl bg-[#FAF7F2]">
-                                <Image
-                                    src="/images/hero-portrait.png"
-                                    alt="Dr. Immanuelson Sam"
-                                    fill
-                                    priority
-                                    sizes="(max-width: 1024px) 100vw, 450px"
-                                    className="object-cover object-top"
-                                />
+                            <div className="space-y-3">
+                                <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden border-2 border-[#CC9F58] shadow-xl bg-[#FAF7F2]">
+                                    <Image
+                                        src="/images/hero-portrait.png"
+                                        alt="Dr. Immanuelson Sam"
+                                        fill
+                                        priority
+                                        sizes="(max-width: 1024px) 100vw, 450px"
+                                        className="object-cover object-top"
+                                    />
+                                </div>
+
+                                {/* Standardized Title Underneath Headshot */}
+                                <div className="text-center px-2">
+                                    <p className="text-xs font-semibold text-[#CC9F58] tracking-wide leading-relaxed">
+                                        {STANDARDIZED_TITLE}
+                                    </p>
+                                </div>
                             </div>
 
                             {/* Accreditations & Credentials */}
@@ -187,25 +204,25 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        {/* Right Column: In-Depth Narrative */}
+                        {/* Right Column: In-Depth Narrative with Text Justification */}
                         <div className="lg:col-span-7 space-y-8 text-[#4A5568] text-sm sm:text-base leading-relaxed">
                             <div className="space-y-4">
                                 <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#072954]">
                                     A Career Forged in Banking, Reform, and Executive Development
                                 </h2>
-                                <p>
-                                    With more than 15 years of battle-tested leadership experience, Dr. Immanuelson Sam
+                                <p className="text-justify">
+                                    With almost two decades of battle-tested leadership experience, Dr. Immanuelson Sam
                                     has established himself as one of West Africa&apos;s most respected strategic advisors.
                                     His foundational career took root in high-stakes commercial banking environments, where
                                     he operated at the intersection of credit architecture, operational risk mitigation,
                                     and institutional capital preservation.
                                 </p>
-                                <p>
+                                <p className="text-justify">
                                     Observing firsthand how leadership voids and reactive management erode institutional value,
                                     Dr. Sam transitioned his focus toward broad-scale organizational transformation and human
-                                    capital architecture. Today, as Managing Partner at Goldenmuv Premium Consulting Limited (GMPC),
+                                    capital architecture. Today, as an executive management consultant and trusted board advisor,
                                     he directs multidisciplinary consulting teams advising government councils, commercial banks,
-                                    and corporate boards across Nigeria and the wider African continent.
+                                    and corporate conglomerates across Nigeria and the wider African continent.
                                 </p>
                             </div>
 
@@ -215,17 +232,17 @@ export default function AboutPage() {
                                     Strategic Scope & Governance Footprint
                                 </h3>
                                 <ul className="space-y-2.5 text-xs sm:text-sm text-[#4A5568]">
-                                    <li className="flex items-start gap-2.5">
+                                    <li className="flex items-start gap-2.5 text-justify">
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#CC9F58] mt-2 shrink-0" />
                                         <span>Advising over 50 corporate and public institutions on governance frameworks, risk containment, and executive succession.</span>
                                     </li>
-                                    <li className="flex items-start gap-2.5">
+                                    <li className="flex items-start gap-2.5 text-justify">
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#CC9F58] mt-2 shrink-0" />
                                         <span>Active Non-Executive Director on corporate boards across financial services, real estate, and agricultural logistics.</span>
                                     </li>
-                                    <li className="flex items-start gap-2.5">
+                                    <li className="flex items-start gap-2.5 text-justify">
                                         <span className="w-1.5 h-1.5 rounded-full bg-[#CC9F58] mt-2 shrink-0" />
-                                        <span>Certified Management Consultant (CMC) and leadership coach for the prestigious Young African Leaders Initiative (YALI).</span>
+                                        <span>Certified Management Consultant (CMC) and leadership coach cultivating high-performance governance standards.</span>
                                     </li>
                                 </ul>
                             </div>
@@ -234,11 +251,12 @@ export default function AboutPage() {
                                 <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#072954]">
                                     The Philosophy: Inner Alignment Precedes Institutional Triumph
                                 </h3>
-                                <p>
+                                <p className="text-justify">
                                     Dr. Sam advocates that organizational breakdown is rarely a failure of intellectual models;
-                                    it is fundamentally a failure of character, time mastery, and emotional clarity. In his published work,
-                                    <em> Time Code</em>, he outlines the actionable disciplines leaders must cultivate to prevent cognitive
-                                    exhaustion, eliminate productivity leaks, and remain anchored to their core mandate during turbulent economic cycles.
+                                    it is fundamentally a failure of character, temporal mastery, and emotional clarity. Through
+                                    his published works and leadership masterclasses, he outlines the actionable disciplines leaders
+                                    must cultivate to prevent cognitive exhaustion, eliminate productivity leaks, and remain anchored
+                                    to their core mandate during turbulent economic cycles.
                                 </p>
                             </div>
 
@@ -290,7 +308,7 @@ export default function AboutPage() {
                                             </div>
                                             <h3 className="font-serif text-lg font-bold text-[#072954]">{pillar.title}</h3>
                                         </div>
-                                        <p className="text-xs sm:text-sm text-[#4A5568] leading-relaxed">
+                                        <p className="text-xs sm:text-sm text-[#4A5568] leading-relaxed text-justify">
                                             {pillar.description}
                                         </p>
                                     </div>

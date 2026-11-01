@@ -18,22 +18,21 @@ import {
     Download,
     ShieldCheck,
     Clock,
-    CheckCircle2,
-    Sparkles
+    Sparkles,
+    ArrowUpRight
 } from "lucide-react";
+import { SITE_METADATA } from "@/lib/constants";
 
 export const metadata: Metadata = {
-    title: "Services & Booking Rate Card | Dr. Immanuelson Sam",
+    title: "Services & Booking Schedule | Dr. Immanuelson Sam",
     description:
-        "Official executive rate card and services schedule for Dr. Immanuelson Sam. Keynote speaking, strategic management consulting, corporate training, and executive advisory.",
+        "Official executive advisory schedule for Dr. Immanuelson Sam. Keynote speaking, strategic management consulting, corporate training, and executive advisory.",
 };
 
 interface ServiceItem {
     number: string;
     category: "Speaking" | "Advisory" | "Training" | "Consultation";
     title: string;
-    rateRange: string;
-    unit: string;
     duration: string;
     overview: string;
     icon: typeof Mic2;
@@ -44,9 +43,7 @@ const SERVICES_DATA: ServiceItem[] = [
     {
         number: "01",
         category: "Speaking",
-        title: "Keynote Speaking (Physical)",
-        rateRange: "₦500,000 – ₦3,000,000",
-        unit: "per engagement",
+        title: "Keynote Speaking (Physical / On-Site)",
         duration: "1–2 Hours (Customizable)",
         overview:
             "Ignite corporate and institutional audiences with transformative paradigms on servant leadership, change, and risk management.",
@@ -56,9 +53,7 @@ const SERVICES_DATA: ServiceItem[] = [
     {
         number: "02",
         category: "Speaking",
-        title: "Keynote Speaking (Virtual)",
-        rateRange: "₦250,000 – ₦1,000,000",
-        unit: "per engagement",
+        title: "Keynote Speaking (Virtual Webinar)",
         duration: "1–2 Hours (Customizable)",
         overview:
             "High-energy, interactive online keynotes unlocking organizational alignment and peak performance for global, remote teams.",
@@ -67,9 +62,7 @@ const SERVICES_DATA: ServiceItem[] = [
     {
         number: "03",
         category: "Advisory",
-        title: "Strategic Advisory & Consulting",
-        rateRange: "₦500,000 – ₦10,000,000",
-        unit: "session / retainer",
+        title: "Strategic Advisory & Management Consulting",
         duration: "Session / Retainer",
         overview:
             "Visionary executive guidance on organizational design, risk frameworks, institutional reforms, and sustainable value creation.",
@@ -80,8 +73,6 @@ const SERVICES_DATA: ServiceItem[] = [
         number: "04",
         category: "Training",
         title: "Leadership & Culture Transformation",
-        rateRange: "₦1,000,000 – ₦3,000,000",
-        unit: "per workshop",
         duration: "Half-Day / Multi-Day",
         overview:
             "Equip executive and managerial teams with servant leadership, emotional intelligence, and cultural shifts for sustainable excellence.",
@@ -91,8 +82,6 @@ const SERVICES_DATA: ServiceItem[] = [
         number: "05",
         category: "Training",
         title: "Human Capital & Team Optimization",
-        rateRange: "₦400,000 – ₦1,000,000",
-        unit: "per session",
         duration: "Intensive Session",
         overview:
             "Strategic talent attraction, retention architecture, and team optimization to eliminate productivity leaks and elevate engagement.",
@@ -102,19 +91,15 @@ const SERVICES_DATA: ServiceItem[] = [
         number: "06",
         category: "Advisory",
         title: "Financial & Performance Advisory",
-        rateRange: "₦300,000 – ₦2,000,000",
-        unit: "session / advisory",
         duration: "Session / Advisory",
         overview:
-            "Leveraging 15+ years of banking expertise to guide capital planning, internal controls, and liquidity stability in volatile economies.",
+            "Leveraging almost two decades of banking expertise to guide capital planning, internal controls, and liquidity stability in volatile economies.",
         icon: TrendingUp,
     },
     {
         number: "07",
         category: "Training",
         title: "Digital Transformation Strategies",
-        rateRange: "₦300,000 – ₦2,000,000",
-        unit: "per workshop",
         duration: "Custom Workshop",
         overview:
             "Accelerate institutional innovation, digital tool adoption, and agile market positioning to drive sustainable top-line revenue growth.",
@@ -124,8 +109,6 @@ const SERVICES_DATA: ServiceItem[] = [
         number: "08",
         category: "Advisory",
         title: "Debt Recovery & Credit Advisory",
-        rateRange: "₦400,000 – ₦1,500,000",
-        unit: "project-based",
         duration: "Project Scope",
         overview:
             "Ethical debt recovery architecture, structured credit underwriting diagnostics, and rigorous risk mitigation for balance-sheet health.",
@@ -135,8 +118,6 @@ const SERVICES_DATA: ServiceItem[] = [
         number: "09",
         category: "Advisory",
         title: "MSME Mentoring & Business Structuring",
-        rateRange: "₦500,000 – ₦2,500,000",
-        unit: "project-based",
         duration: "Project Milestone",
         overview:
             "Addressing core structural bottlenecks of growing enterprises by implementing institutional workflows, governance, and scalability.",
@@ -146,8 +127,6 @@ const SERVICES_DATA: ServiceItem[] = [
         number: "10",
         category: "Consultation",
         title: "1-on-1 Executive Consultation",
-        rateRange: "₦100,000 – ₦250,000",
-        unit: "per 1-hour session",
         duration: "1 Hour (Packages Available)",
         overview:
             "Confidential, high-clarity strategic counseling for C-suite leaders, founders, and public figures seeking personal breakthroughs.",
@@ -171,17 +150,17 @@ export default function RatesPage() {
                         <div className="lg:col-span-7 space-y-5">
                             <div className="inline-flex items-center gap-2">
                                 <span className="text-[11px] uppercase tracking-[0.2em] font-bold text-[#CC9F58]">
-                                    GOLDENMUV PREMIUM CONSULTING LIMITED
+                                    EXECUTIVE ADVISORY & SPEAKING SCHEDULE
                                 </span>
                             </div>
 
                             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#072954] tracking-tight leading-[1.12]">
                                 Services & Booking <br />
-                                <span className="italic text-[#CC9F58]">Rate Card & Advisory Schedule</span>
+                                <span className="italic text-[#CC9F58]">Advisory Scope & Schedule</span>
                             </h1>
 
                             <p className="text-[#4A5568] text-base sm:text-lg leading-relaxed max-w-2xl">
-                                Transparent, value-driven investment brackets for engaging Dr. Immanuelson Sam across
+                                Bespoke, value-driven investment proposals for engaging Dr. Immanuelson Sam across
                                 keynote addresses, corporate masterclasses, executive retreats, and institutional advisory.
                             </p>
 
@@ -199,7 +178,7 @@ export default function RatesPage() {
                                     className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-bold uppercase tracking-wider transition-all shadow-xs"
                                 >
                                     <Download className="w-4 h-4 text-[#CC9F58]" />
-                                    <span>Download PDF Rate Card</span>
+                                    <span>Download Speaker Kit (PDF)</span>
                                 </a>
                             </div>
                         </div>
@@ -211,21 +190,21 @@ export default function RatesPage() {
                                     <div className="flex items-center gap-2">
                                         <ShieldCheck className="w-4 h-4 text-[#CC9F58]" />
                                         <span className="text-[11px] font-bold uppercase tracking-widest text-[#072954]">
-                                            Engagement Terms & Tiers
+                                            Engagement Terms & Model
                                         </span>
                                     </div>
-                                    <span className="text-[10px] font-mono text-[#4A5568]">GMPC-RATES</span>
+                                    <span className="text-[10px] font-mono text-[#4A5568]">RATE-CARD</span>
                                 </div>
 
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
-                                        <span className="font-serif text-2xl font-bold text-[#072954]">₦500k+</span>
-                                        <p className="text-[11px] text-[#4A5568] leading-tight">Keynote Speaking & Masterclass Base Brackets</p>
+                                        <span className="font-serif text-2xl font-bold text-[#072954]">Bespoke</span>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Tailored Proposals by Event Scope & Depth</p>
                                     </div>
 
                                     <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
                                         <span className="font-serif text-2xl font-bold text-[#072954]">10</span>
-                                        <p className="text-[11px] text-[#4A5568] leading-tight">Practice Areas & Tailored Service Modules</p>
+                                        <p className="text-[11px] text-[#4A5568] leading-tight">Practice Areas & Custom Service Modules</p>
                                     </div>
 
                                     <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] space-y-1">
@@ -241,12 +220,20 @@ export default function RatesPage() {
 
                                 <div className="p-3.5 rounded-2xl bg-white border border-[#E8EDF4] flex items-center justify-between text-xs">
                                     <div className="space-y-0.5">
-                                        <p className="font-bold text-[#072954]">Currency Standard</p>
-                                        <p className="text-[11px] text-[#4A5568]">Quoted in NGN (₦) • FX Invoicing on Request</p>
+                                        <p className="font-bold text-[#072954]">Consulting Firm</p>
+                                        <a
+                                            href={SITE_METADATA.firmWebsite}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-[11px] text-[#CC9F58] hover:underline inline-flex items-center gap-1 font-medium"
+                                        >
+                                            <span>Goldenmuv Consulting</span>
+                                            <ArrowUpRight className="w-3 h-3" />
+                                        </a>
                                     </div>
                                     <Link
                                         href="/contact"
-                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#CC9F58] hover:text-[#072954] transition-colors"
+                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-[#072954] hover:text-[#CC9F58] transition-colors"
                                     >
                                         <span>Inquire</span>
                                         <ArrowRight className="w-3.5 h-3.5" />
@@ -263,10 +250,10 @@ export default function RatesPage() {
                             <div className="lg:col-span-8 space-y-2">
                                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#072954]">
                                     <ShieldCheck className="w-4 h-4 text-[#CC9F58]" />
-                                    <span>Standard Booking Protocol</span>
+                                    <span>Bespoke Proposal Protocol</span>
                                 </div>
                                 <p className="text-xs text-[#4A5568] leading-relaxed">
-                                    All rates are quoted in <strong>Nigerian Naira (₦)</strong> and tailored based on audience scale, institutional scope, and geographic travel. Fees exclude logistics and statutory VAT unless bundled into bespoke corporate retainers.
+                                    Every institutional milestone is unique. Engagement proposals are tailored based on audience scale, travel logistics, and depth of strategic deliverables. <strong>Multi-session packages and institutional board retainers</strong> are prepared upon structured brief submission.
                                 </p>
                             </div>
 
@@ -276,7 +263,7 @@ export default function RatesPage() {
                                     className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
                                 >
                                     <Calendar className="w-3.5 h-3.5" />
-                                    <span>Custom Quote</span>
+                                    <span>Request Custom Quote</span>
                                 </Link>
                                 <a
                                     href="/docs/dr-immanuelson-sam-speaker-kit.pdf"
@@ -284,7 +271,7 @@ export default function RatesPage() {
                                     className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
                                 >
                                     <Download className="w-3.5 h-3.5 text-[#CC9F58]" />
-                                    <span>Rate Card (PDF)</span>
+                                    <span>Speaker Kit (PDF)</span>
                                 </a>
                             </div>
                         </div>
@@ -294,10 +281,10 @@ export default function RatesPage() {
                     <div className="space-y-6">
                         <div className="flex items-center justify-between border-b border-[#E8EDF4] pb-3">
                             <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#072954]">
-                                Schedule of Services & Investment Brackets
+                                Schedule of Services & Practice Offerings
                             </h2>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#CC9F58]">
-                                10 Practice Offerings
+                                10 Core Offerings
                             </span>
                         </div>
 
@@ -336,13 +323,13 @@ export default function RatesPage() {
                                                 </h3>
                                             </div>
 
-                                            {/* Streamlined Price Display */}
-                                            <div className="border-y border-[#E8EDF4] py-2.5 flex items-baseline justify-between">
-                                                <span className="font-serif text-base sm:text-lg font-bold text-[#072954] tracking-tight">
-                                                    {service.rateRange}
+                                            {/* Request Quote Banner */}
+                                            <div className="border-y border-[#E8EDF4] py-2.5 flex items-center justify-between">
+                                                <span className="text-[11px] uppercase font-bold tracking-wider text-[#072954]">
+                                                    Fee Structure
                                                 </span>
-                                                <span className="text-[10px] text-[#4A5568] font-medium capitalize">
-                                                    {service.unit}
+                                                <span className="text-xs font-semibold text-[#CC9F58] bg-[#FAF7F2] px-2.5 py-0.5 rounded border border-[#E8EDF4]">
+                                                    Request Quote
                                                 </span>
                                             </div>
 
@@ -362,13 +349,13 @@ export default function RatesPage() {
                                         {/* Footer Action */}
                                         <div className="pt-3 border-t border-[#E8EDF4] flex items-center justify-between text-xs">
                                             <span className="text-[10px] text-[#4A5568] font-mono">
-                                                GMPC-{service.number}
+                                                REF-{service.number}
                                             </span>
                                             <Link
                                                 href="/contact"
                                                 className="inline-flex items-center gap-1 text-[11px] font-bold text-[#072954] group-hover:text-[#CC9F58] transition-colors"
                                             >
-                                                <span>Book Engagement</span>
+                                                <span>Request Quote</span>
                                                 <ArrowRight className="w-3 h-3 text-[#CC9F58] group-hover:translate-x-0.5 transition-transform" />
                                             </Link>
                                         </div>

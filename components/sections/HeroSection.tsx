@@ -66,7 +66,7 @@ export default function HeroSection() {
 
                         <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-[#E8EDF4] text-[#072954]">
                             <p className="text-[10px] uppercase tracking-widest font-bold text-[#CC9F58]">Leadership Authority</p>
-                            <p className="text-xs font-semibold">Certified Management Consultant (CMC) & YALI Fellow</p>
+                            <p className="text-xs font-semibold">Certified Management Consultant || Global Speaker || African Mentor</p>
                         </div>
                     </div>
                 </div>

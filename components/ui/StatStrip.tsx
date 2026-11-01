@@ -1,6 +1,6 @@
 export default function StatStrip() {
     const stats = [
-        { value: "15+", label: "Years of Strategic Impact" },
+        { value: "~20", label: "Years of Strategic Impact" },
         { value: "50+", label: "Institutions & Boards Advised" },
         { value: "10,000+", label: "Leaders & Executives Trained" },
     ];
