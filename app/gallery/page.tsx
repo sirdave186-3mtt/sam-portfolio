@@ -184,7 +184,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: "g18",
-        src: "/images/gallery/gallery-18.jpg",
+        src: "/images/gallery/gallery-18.JPG",
         alt: "Strategic executive leadership colloquium",
         category: "Executive Advisory",
         title: "Executive Leadership Colloquium",
@@ -238,7 +238,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     },
     {
         id: "g24",
-        src: "/images/gallery/gallery-24.jpg",
+        src: "/images/gallery/gallery-24.JPG",
         alt: "High-performance leadership intensive for corporate executives",
         category: "Keynotes & Summits",
         title: "High-Performance Leadership Masterclass",
@@ -248,6 +248,23 @@ const GALLERY_ITEMS: GalleryItem[] = [
     {
         id: "g25",
         src: "/images/gallery/gallery-25.jpg",
+        alt: "National broadcast feature on leadership and economic reform",
+        category: "Honorary & Press",
+        title: "National Media Feature & Thought Leadership Broadcast",
+        location: "Abuja, Nigeria",
+        year: "2025",
+    },
+    {
+        id: "g26",
+        src: "/images/gallery/gallery-26.jpg",
+        alt: "National broadcast feature on leadership and economic reform",
+        category: "Honorary & Press",
+        title: "National Media Feature & Thought Leadership Broadcast",
+        location: "Abuja, Nigeria",
+        year: "2025",
+    }, {
+        id: "g27",
+        src: "/images/gallery/gallery-27.jpg",
         alt: "National broadcast feature on leadership and economic reform",
         category: "Honorary & Press",
         title: "National Media Feature & Thought Leadership Broadcast",
@@ -381,8 +398,8 @@ export default function GalleryPage() {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer ${activeCategory === category
-                                        ? "bg-[#072954] text-white shadow-sm"
-                                        : "bg-[#FAF7F2] text-[#4A5568] hover:bg-[#E8EDF4] hover:text-[#072954] border border-[#E8EDF4]"
+                                    ? "bg-[#072954] text-white shadow-sm"
+                                    : "bg-[#FAF7F2] text-[#4A5568] hover:bg-[#E8EDF4] hover:text-[#072954] border border-[#E8EDF4]"
                                     }`}
                             >
                                 {category}

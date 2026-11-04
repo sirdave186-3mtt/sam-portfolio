@@ -53,8 +53,8 @@ export default function SpeakingSection() {
                     {/* Left: Speaking Photo */}
                     <div className="lg:col-span-5 relative min-h-[300px] lg:min-h-full bg-[#072954]">
                         <Image
-                            src="/images/speaking-stage.jpg"
-                            alt="Dr. Immanuelson Sam on Stage"
+                            src="/images/gallery/gallery-14.jpg"
+                            alt="Dr. Immanuelson Sam Keynote & Masterclass Facilitation"
                             fill
                             priority
                             sizes="(max-width: 1024px) 100vw, 500px"

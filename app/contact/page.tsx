@@ -14,9 +14,11 @@ import {
     AlertCircle,
     ShieldCheck,
     ArrowRight,
+    Globe,
     Sparkles,
     Building2,
     FileText
+
 } from "lucide-react";
 import { SITE_METADATA } from "@/lib/constants";
 
@@ -249,27 +251,34 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
-                                <div className="p-4 rounded-xl bg-white border border-[#E8EDF4] space-y-2 text-xs">
-                                    <div className="flex items-center gap-2 font-bold text-[#072954]">
-                                        <Building2 className="w-4 h-4 text-[#CC9F58]" />
-                                        <span>Firm & Community Platforms</span>
+                                {/* Firm & Community Platforms */}
+                                <div className="p-5 rounded-2xl bg-white border border-[#E8EDF4] space-y-3 shadow-xs">
+                                    <div className="flex items-center gap-2">
+                                        <Globe className="w-4 h-4 text-[#CC9F58]" />
+                                        <span className="text-[11px] font-bold uppercase tracking-widest text-[#072954]">
+                                            Firm & Community Platforms
+                                        </span>
                                     </div>
-                                    <div className="flex flex-col gap-1 text-[11px]">
+
+                                    <div className="grid grid-cols-1 gap-2.5 pt-1">
                                         <a
-                                            href={SITE_METADATA.firmWebsite}
+                                            href="https://goldenmuv.com"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-[#4A5568] hover:text-[#CC9F58] transition-colors"
+                                            className="flex items-center justify-between px-4 py-2.5 rounded-xl border border-[#CDD4DD] bg-[#FAF7F2] hover:bg-white hover:border-[#CC9F58] text-[#072954] text-xs font-semibold transition-all group"
                                         >
-                                            • Consulting Firm: <span className="font-semibold text-[#072954]">{SITE_METADATA.firmWebsite}</span>
+                                            <span>Visit Goldenmuv Consulting</span>
+                                            <ArrowRight className="w-3.5 h-3.5 text-[#CC9F58] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                                         </a>
+
                                         <a
-                                            href={SITE_METADATA.becomingCommunityWebsite}
+                                            href="https://becomerscommunity.com"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-[#4A5568] hover:text-[#CC9F58] transition-colors"
+                                            className="flex items-center justify-between px-4 py-2.5 rounded-xl border border-[#CDD4DD] bg-[#FAF7F2] hover:bg-white hover:border-[#CC9F58] text-[#072954] text-xs font-semibold transition-all group"
                                         >
-                                            • The Becoming Community: <span className="font-semibold text-[#072954]">{SITE_METADATA.becomingCommunityWebsite}</span>
+                                            <span>The Becoming Community</span>
+                                            <ArrowRight className="w-3.5 h-3.5 text-[#CC9F58] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                                         </a>
                                     </div>
                                 </div>

@@ -92,19 +92,28 @@ export default function BookSpotlight() {
                             </div>
                         </div>
 
-                        {/* CTAs */}
-                        <div className="pt-4 border-t border-[#E8EDF4] flex flex-wrap items-center gap-3">
+                        {/* BOOK 1: The Time Code CTA Row */}
+                        <div className="pt-4 border-t border-[#E8EDF4] flex flex-wrap items-center gap-2.5">
+                            <a
+                                href="#" /* Replace with The Time Code Amazon URL once available */
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 min-w-[140px] inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-[#072954] hover:bg-[#041A38] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
+                            >
+                                <span>Get on Amazon</span>
+                                <ArrowRight className="w-3.5 h-3.5 text-[#CC9F58]" />
+                            </a>
                             <Link
                                 href="/contact"
-                                className="flex-1 text-center px-5 py-3 rounded-xl bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
+                                className="inline-flex items-center justify-center px-4 py-3 rounded-xl bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
                             >
-                                Order Book
+                                Bulk Order
                             </Link>
                             <Link
                                 href="/books"
-                                className="px-5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] font-semibold text-xs uppercase tracking-wider transition-all"
+                                className="px-3.5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] font-semibold text-xs uppercase tracking-wider transition-all"
                             >
-                                Learn More
+                                Details
                             </Link>
                         </div>
                     </div>
@@ -167,19 +176,28 @@ export default function BookSpotlight() {
                             </div>
                         </div>
 
-                        {/* CTAs */}
-                        <div className="pt-4 border-t border-[#E8EDF4] flex flex-wrap items-center gap-3">
+                        {/* BOOK 2: The School of Talents CTA Row */}
+                        <div className="pt-4 border-t border-[#E8EDF4] flex flex-wrap items-center gap-2.5">
+                            <a
+                                href="https://share.google/F2o2casrPdKeEsVbZ"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 min-w-[140px] inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-[#072954] hover:bg-[#041A38] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
+                            >
+                                <span>Get on Amazon</span>
+                                <ArrowRight className="w-3.5 h-3.5 text-[#CC9F58]" />
+                            </a>
                             <Link
                                 href="/contact"
-                                className="flex-1 text-center px-5 py-3 rounded-xl bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
+                                className="inline-flex items-center justify-center px-4 py-3 rounded-xl bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
                             >
-                                Order Book
+                                Bulk Order
                             </Link>
                             <Link
                                 href="/books"
-                                className="px-5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] font-semibold text-xs uppercase tracking-wider transition-all"
+                                className="px-3.5 py-3 rounded-xl border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] font-semibold text-xs uppercase tracking-wider transition-all"
                             >
-                                Learn More
+                                Details
                             </Link>
                         </div>
                     </div>

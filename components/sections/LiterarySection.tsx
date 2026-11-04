@@ -13,7 +13,7 @@ export default function LiterarySection() {
             icon: Target,
             title: "Purpose-Driven Execution Under Pressure",
             description:
-                "Synthesizing 15+ years of high-stakes corporate banking and public sector leadership into actionable disciplines for consistent performance.",
+                "Synthesizing almost two decades of high-stakes corporate banking and public sector leadership into actionable disciplines for consistent performance.",
         },
         {
             icon: Zap,

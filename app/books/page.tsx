@@ -6,6 +6,7 @@ import {
     BookOpen,
     CheckCircle2,
     ArrowRight,
+    ArrowUpRight,
     Sparkles,
     Building2,
     Award,
@@ -235,17 +236,26 @@ export default function BooksPage() {
                                 </div>
                             </div>
 
-                            <div className="pt-2 flex flex-wrap items-center gap-4">
+                            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-[#072954] hover:bg-[#041A38] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-sm"
+                                >
+                                    <span>Get on Amazon</span>
+                                    <ArrowUpRight className="w-4 h-4 text-[#CC9F58]" />
+                                </a>
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-sm"
+                                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-sm"
                                 >
                                     <Building2 className="w-4 h-4" />
                                     <span>Request Corporate Bulk Order</span>
                                 </Link>
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
+                                    className="inline-flex items-center gap-2 px-5 py-3.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
                                 >
                                     <span>Order Individual Copy</span>
                                     <ArrowRight className="w-4 h-4 text-[#CC9F58]" />
@@ -321,17 +331,26 @@ export default function BooksPage() {
                                 </div>
                             </div>
 
-                            <div className="pt-2 flex flex-wrap items-center gap-4">
+                            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
+                                <a
+                                    href="https://share.google/F2o2casrPdKeEsVbZ"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-[#072954] hover:bg-[#041A38] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-sm"
+                                >
+                                    <span>Get on Amazon</span>
+                                    <ArrowUpRight className="w-4 h-4 text-[#CC9F58]" />
+                                </a>
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-sm"
+                                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all shadow-sm"
                                 >
                                     <Building2 className="w-4 h-4" />
                                     <span>Institutional Bulk Orders</span>
                                 </Link>
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
+                                    className="inline-flex items-center gap-2 px-5 py-3.5 rounded-lg border border-[#CDD4DD] bg-white hover:bg-[#FAF7F2] text-[#072954] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
                                 >
                                     <span>Order Individual Copy</span>
                                     <ArrowRight className="w-4 h-4 text-[#CC9F58]" />
