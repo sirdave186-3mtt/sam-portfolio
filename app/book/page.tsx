@@ -1,20 +1,18 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ShieldCheck, Calendar, ArrowRight, Clock, Phone } from "lucide-react";
 import { SITE_METADATA } from "@/lib/constants";
 
-export const metadata: Metadata = {
-    title: "Book Dr. Immanuelson Sam | Executive Booking Portal",
-    description:
-        "Official booking and engagement request portal for Dr. Immanuelson Sam. Schedule keynote addresses, corporate masterclasses, and executive advisory sessions.",
-};
-
 const EMBED_FORM_URL =
     "https://docs.google.com/forms/d/1hZvcpewuhBot5TeD07T7_lmtxqhSvpIWjwuitRrpGUM/viewform?embedded=true";
 
 export default function BookPage() {
+    const [isFormLoading, setIsFormLoading] = useState(true);
+
     return (
         <div className="relative min-h-screen bg-[#FAF7F2] text-[#4A5568] flex flex-col selection:bg-[#CC9F58] selection:text-[#072954]">
             <Navbar />
@@ -68,8 +66,26 @@ export default function BookPage() {
                         </div>
                     </div>
 
-                    {/* Embedded Form Container */}
-                    <div className="bg-white rounded-3xl border border-[#E8EDF4] p-2 sm:p-6 shadow-md overflow-hidden">
+                    {/* Embedded Form Container with Rolling Loader Overlay */}
+                    <div className="relative bg-white rounded-3xl border border-[#E8EDF4] p-2 sm:p-6 shadow-md overflow-hidden min-h-[600px]">
+
+                        {isFormLoading && (
+                            <div className="absolute inset-0 z-10 bg-white flex flex-col items-center justify-start pt-20 sm:pt-28 px-4 text-center space-y-4">
+                                <div className="relative flex items-center justify-center">
+                                    {/* Outer subtle ring + spinning Heritage Gold arc */}
+                                    <div className="w-12 h-12 rounded-full border-4 border-[#E8EDF4] border-t-[#CC9F58] border-r-[#072954] animate-spin" />
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="font-serif text-base sm:text-lg font-bold text-[#072954]">
+                                        Loading Official Booking Form...
+                                    </p>
+                                    <p className="text-xs text-[#4A5568] max-w-xs mx-auto">
+                                        Please wait a moment while we establish a secure connection to the Secretariat portal.
+                                    </p>
+                                </div>
+                            </div>
+                        )}
+
                         <iframe
                             src={EMBED_FORM_URL}
                             width="100%"
@@ -77,8 +93,10 @@ export default function BookPage() {
                             frameBorder="0"
                             marginHeight={0}
                             marginWidth={0}
+                            onLoad={() => setIsFormLoading(false)}
                             title="Dr. Immanuelson Sam Booking Form"
-                            className="w-full rounded-2xl bg-white overflow-hidden"
+                            className={`w-full rounded-2xl bg-white overflow-hidden transition-opacity duration-500 ${isFormLoading ? "opacity-0" : "opacity-100"
+                                }`}
                         >
                             Loading official booking form…
                         </iframe>
