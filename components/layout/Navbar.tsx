@@ -132,7 +132,7 @@ export default function Navbar() {
 
                     <div className="pt-2">
                         <Link
-                            href="/contact"
+                            href="/book"
                             onClick={() => setIsOpen(false)}
                             className="w-full inline-flex items-center justify-center px-5 py-3 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] text-xs font-bold uppercase tracking-wider transition-all"
                         >

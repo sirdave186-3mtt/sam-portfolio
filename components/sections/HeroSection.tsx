@@ -32,7 +32,7 @@ export default function HeroSection() {
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
                         {/* Primary Action: Gold with Navy Text */}
                         <Link
-                            href="/contact"
+                            href="/book"
                             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-md"
                         >
                             <span>Book a Speaking Slot</span>
