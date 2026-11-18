@@ -81,7 +81,7 @@ export default function Navbar() {
                     {/* Gold Button with Navy Text (Brand Guide Page 4 Strict Rule) */}
                     <div className="hidden lg:flex items-center">
                         <Link
-                            href="/contact"
+                            href="/book"
                             className="px-6 py-2.5 rounded-lg bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-sm"
                         >
                             Book Now

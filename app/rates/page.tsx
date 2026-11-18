@@ -166,7 +166,7 @@ export default function RatesPage() {
 
                             <div className="pt-2 flex flex-wrap items-center gap-3">
                                 <Link
-                                    href="/contact"
+                                    href="/book"
                                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#072954] hover:bg-[#041A38] text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-xs"
                                 >
                                     <Calendar className="w-4 h-4 text-[#CC9F58]" />

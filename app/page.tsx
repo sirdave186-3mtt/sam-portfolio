@@ -145,7 +145,7 @@ export default function HomePage() {
             {/* Buttons */}
             <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href="/book"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-lg hover:shadow-xl active:scale-[0.98]"
               >
                 <span>Initiate Booking Inquiry</span>

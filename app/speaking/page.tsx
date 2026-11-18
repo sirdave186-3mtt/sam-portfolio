@@ -201,7 +201,7 @@ export default function SpeakingPage() {
                                 </p>
                             </div>
                             <Link
-                                href="/contact"
+                                href="/book"
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#CC9F58] hover:bg-[#b88c49] text-[#072954] text-xs font-bold uppercase tracking-wider transition-all self-start sm:self-auto shadow-sm"
                             >
                                 <span>Request Speaker Booking</span>

@@ -379,7 +379,7 @@ export default function GalleryPage() {
                                         <p className="text-[11px] text-[#4A5568]">Direct media access & speaker photography</p>
                                     </div>
                                     <Link
-                                        href="/contact"
+                                        href="/book"
                                         className="inline-flex items-center gap-1 text-[11px] font-bold text-[#CC9F58] hover:text-[#072954] transition-colors"
                                     >
                                         <span>Request Kit</span>

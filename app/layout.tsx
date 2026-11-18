@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${lora.variable} ${poppins.variable} scroll-smooth`}>
-      <body className="bg-white text-slate-800 antialiased selection:bg-[#CC9F58] selection:text-[#072954]">
+    <html lang="en" suppressHydrationWarning className={`${lora.variable} ${poppins.variable} scroll-smooth`}>
+      <body suppressHydrationWarning className="bg-white text-slate-800 antialiased selection:bg-[#CC9F58] selection:text-[#072954]">
         {children}
       </body>
     </html>
